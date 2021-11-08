@@ -1,0 +1,141 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Topped Dress Floral",
+      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/84b008fdf38016ae119a8ead7cb16bb8d575ab0c_xxl-1.jpg",
+      "price": 150000,
+      "description": "Calf-length dress in a cotton weave with a smocked bodice. Narrow, adjustable, detachable shoulder straps and a frill trim at the top. Unlined.",
+      "quantity": 5,
+      "categories": "fashion",
+      "tags": ["fashion", "women"]
+    },
+    {
+      "id": 2,
+      "name": "Short Top",
+      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/f0e6770cc58cbf585caf009b8722cad262cad9c0_xxl-1.jpg",
+      "price": 95000,
+      "description": "Short top in soft seersucker with a square neckline, narrow elastication at the top and wide, smocked shoulder straps. Smocking at the waist and a flared peplum.",
+      "quantity": 5,
+      "categories": "fashion",
+      "tags": ["fashion", "women"]
+    },
+    {
+      "id": 3,
+      "name": "Nike Sportswear Swoosh",
+      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a24b7ad6-d6d1-4db2-9b14-16bf30d22812/sportswear-swoosh-french-terry-hoodie-7NmqH4.png",
+      "price": 450000,
+      "description": "The Nike Sportswear Swoosh Full-Zip Hoodie shows love for the logo that started it all.Printed and embroidered details add texture and style to this versatile French terry layer.",
+      "quantity": 3,
+      "categories": "fashion",
+      "tags": ["fashion", "men"]
+    },
+    {
+      "id": 4,
+      "name": "Cotton Cap",
+      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/558e37408f0f7cc2676459048a810d643002955c_xxl-1.jpg",
+      "price": 120000,
+      "description": "Blank Staples is a streetwear collection of minimalistic pieces that are the perfect canvas for your personal style and creativity. This stylish twill cap is made from organic cotton and recycled cotton.",
+      "quantity": 5,
+      "categories": "fashion",
+      "tags": ["fashion", "accessories"]
+    },
+    {
+      "id": 5,
+      "name": "Nike Air Force 1 '07 Premium",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c678adbc-3bfb-41c8-8ca2-812f95be7c82/air-force-1-07-shoes-dr1bJC.png",
+      "price": 652500,
+      "description": "Let your youthful optimism shine in the Nike Air Force 1 '07 Premium, the b-ball original that proves you're never too old to go pineapples.",
+      "quantity": 2,
+      "categories": "fashion",
+      "tags": ["fashion", "shoes"]
+    },
+    {
+      "id": 6,
+      "name": "Nike Run Swift 2",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/f690d9fe-26ea-4cb2-9414-827365cfc3c0/run-swift-2-road-running-shoes-Pl8gq3.png",
+      "price": 560500,
+      "description": "The Nike Run Swift 2 is designed with shorter miles in mind.An updated yet familiar shape delivers breathable stability.",
+      "quantity": 4,
+      "categories": "fashion",
+      "tags": ["fashion", "shoes"]
+    },
+    {
+      "id": 7,
+      "name": "Lisabo",
+      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/317/0631745_PE695175_S4.jpg",
+      "price": 1205000,
+      "description": "Table, ash veneer, 105 cm",
+      "quantity": 2,
+      "categories": "furniture",
+      "tags": ["furniture", "table"]
+    },
+    {
+      "id": 8,
+      "name": "Billy/Oxberg Bookcase",
+      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/685/0668501_PE714530_S4.jpg",
+      "price": 1794500,
+      "description": "It is estimated that every five seconds, one BILLY bookcase is sold somewhere in the world. Pretty impressive considering we launched BILLY in 1979. It’s the booklovers choice that never goes out of style.",
+      "quantity": 4,
+      "categories": "furniture",
+      "tags": ["furniture", "cabinet"]
+    },
+    {
+      "id": 9,
+      "name": "Samsung Galaxy S20",
+      "image": "https://image-us.samsung.com/us/smartphones/galaxy-s20/Cosmic-Gray/X1_Lockup_CosmicGray-1600x1200.jpg?$product-details-jpg$",
+      "price": 3592500,
+      "description": "The Galaxy S20 is a well-built premium phone boasting of all the right features. It’s lightweight, waterproof, has a gorgeous display, super smooth 120Hz experience and a flagship camera, atleast on the back.",
+      "quantity": 6,
+      "categories": "electronics",
+      "tags": ["electronics", "handphone"]
+    },
+    {
+      "id": 10,
+      "name": "ASUS Vivobook 14K413",
+      "image": "https://www.asus.com/media/global/gallery/wy50pivjnviluf7u_setting_xxx_0_90_end_800.png",
+      "price": 4837500,
+      "description": "ASUS VivoBook 14 adds flair and dynamism to daily computing. With its Intel® Core™ i7 processor, VivoBook 14 provides the power you need to get things done. What’s more, the unique ASUS NumberPad 2.0 makes number-crunching tasks easy and efficient.",
+      "quantity": 8,
+      "categories": "electronics",
+      "tags": ["electronics", "laptop"]
+    },
+    {
+      "id": 11,
+      "name": "UTESPELARE Gaming Chair",
+      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/856/0985643_PE816715_S4.jpg",
+      "price": 702570,
+      "description": "UTESPELARE gaming chair gives your body a nice support with a synchronised seat and back tilt that precisely follows your movements during the entire match. And after playing, you can sit back to recharge.",
+      "quantity": 2,
+      "categories": "furniture",
+      "tags": ["furniture", "chair"]
+    },
+    {
+      "id": 12,
+      "name": "Samsung 43 Full HD Flat Series",
+      "image": "https://images.samsung.com/is/image/samsung/id-full-hd-n5000-ua43n5001akpxd-frontblack-145041782?$684_547_PNG$",
+      "price": 3504600,
+      "description": "Your favorite TV programs and movies get real. The rich and vivid texture of the Full HD images will take your breath away. Plug your favourite entertainment and media into your TV – watch videos, play music, or view photos through a USB connection.",
+      "quantity": 1,
+      "categories": "electronics",
+      "tags": ["electronics", "tv"]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Fashion",
+      "tags": ["women", "men", "shoes", "accessories"]
+    },
+    {
+      "id": 2,
+      "name": "Furniture",
+      "tags": ["cabinet", "table", "chair"]
+    },
+    {
+      "id": 3,
+      "name": "Electronics",
+      "tags": ["handphone", "laptop", "tv"]
+    }
+  ]
+}
