@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router";
+import Breadcrumb from "./components/Breadcrumb";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <Breadcrumb />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
