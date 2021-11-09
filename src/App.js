@@ -11,10 +11,10 @@ function App() {
     <div>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/catalogs" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/catalogs" component={Catalogs} />
+        <Route exact path="/" component={Catalogs} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/detail:id" component={Detail} />
         <Route exact path="*" component={NotFound} />
