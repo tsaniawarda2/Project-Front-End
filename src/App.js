@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
-import { Home, Login, Register, Catalogs, Detail, Checkout } from "./pages";
+import { Home, Login, Register, Catalogs, Detail, Cart, Checkout } from "./pages";
 import NotFound from "./pages/errors/NotFound";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/catalogs" component={Catalogs} />
+        <Route exact path="/cart" component={Cart} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/detail:id" component={Detail} />
         <Route exact path="*" component={NotFound} />
