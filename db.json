@@ -7,8 +7,7 @@
       "price": 150000,
       "description": "Calf-length dress in a cotton weave with a smocked bodice. Narrow, adjustable, detachable shoulder straps and a frill trim at the top. Unlined.",
       "condition": "good",
-      "categories": "fashion",
-      "tags": ["fashion", "women"]
+      "category": "fashion"
     },
     {
       "id": 2,
@@ -17,8 +16,7 @@
       "price": 95000,
       "description": "Short top in soft seersucker with a square neckline, narrow elastication at the top and wide, smocked shoulder straps. Smocking at the waist and a flared peplum.",
       "condition": "very good",
-      "categories": "fashion",
-      "tags": ["fashion", "women"]
+      "category": "fashion"
     },
     {
       "id": 3,
@@ -27,8 +25,7 @@
       "price": 450000,
       "description": "The Nike Sportswear Swoosh Full-Zip Hoodie shows love for the logo that started it all.Printed and embroidered details add texture and style to this versatile French terry layer.",
       "condition": "excellent",
-      "categories": "fashion",
-      "tags": ["fashion", "men"]
+      "category": "fashion"
     },
     {
       "id": 4,
@@ -37,8 +34,7 @@
       "price": 120000,
       "description": "Blank Staples is a streetwear collection of minimalistic pieces that are the perfect canvas for your personal style and creativity. This stylish twill cap is made from organic cotton and recycled cotton.",
       "condition": "very good",
-      "categories": "fashion",
-      "tags": ["fashion", "accessories"]
+      "category": "fashion"
     },
     {
       "id": 5,
@@ -47,8 +43,7 @@
       "price": 652500,
       "description": "Let your youthful optimism shine in the Nike Air Force 1 '07 Premium, the b-ball original that proves you're never too old to go pineapples.",
       "condition": "moderate",
-      "categories": "fashion",
-      "tags": ["fashion", "shoes"]
+      "category": "fashion"
     },
     {
       "id": 6,
@@ -56,9 +51,8 @@
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/f690d9fe-26ea-4cb2-9414-827365cfc3c0/run-swift-2-road-running-shoes-Pl8gq3.png",
       "price": 560500,
       "description": "The Nike Run Swift 2 is designed with shorter miles in mind.An updated yet familiar shape delivers breathable stability.",
-      "condition": "good",
-      "categories": "fashion",
-      "tags": ["fashion", "shoes"]
+      "condition": "very good",
+      "category": "fashion"
     },
     {
       "id": 7,
@@ -67,8 +61,7 @@
       "price": 1205000,
       "description": "Table, ash veneer, 105 cm",
       "condition": "moderate",
-      "categories": "furniture",
-      "tags": ["furniture", "table"]
+      "category": "furniture"
     },
     {
       "id": 8,
@@ -77,8 +70,7 @@
       "price": 1794500,
       "description": "It is estimated that every five seconds, one BILLY bookcase is sold somewhere in the world. Pretty impressive considering we launched BILLY in 1979. It’s the booklovers choice that never goes out of style.",
       "condition": "very good",
-      "categories": "furniture",
-      "tags": ["furniture", "cabinet"]
+      "category": "furniture"
     },
     {
       "id": 9,
@@ -87,8 +79,7 @@
       "price": 3592500,
       "description": "The Galaxy S20 is a well-built premium phone boasting of all the right features. It’s lightweight, waterproof, has a gorgeous display, super smooth 120Hz experience and a flagship camera, atleast on the back.",
       "condition": "good",
-      "categories": "electronics",
-      "tags": ["electronics", "handphone"]
+      "category": "electronics"
     },
     {
       "id": 10,
@@ -96,9 +87,8 @@
       "image": "https://www.asus.com/media/global/gallery/wy50pivjnviluf7u_setting_xxx_0_90_end_800.png",
       "price": 4837500,
       "description": "ASUS VivoBook 14 adds flair and dynamism to daily computing. With its Intel® Core™ i7 processor, VivoBook 14 provides the power you need to get things done. What’s more, the unique ASUS NumberPad 2.0 makes number-crunching tasks easy and efficient.",
-      "condition": "good",
-      "categories": "electronics",
-      "tags": ["electronics", "laptop"]
+      "condition": "moderate",
+      "category": "electronics"
     },
     {
       "id": 11,
@@ -107,8 +97,7 @@
       "price": 702570,
       "description": "UTESPELARE gaming chair gives your body a nice support with a synchronised seat and back tilt that precisely follows your movements during the entire match. And after playing, you can sit back to recharge.",
       "condition": "good",
-      "categories": "furniture",
-      "tags": ["furniture", "chair"]
+      "category": "furniture"
     },
     {
       "id": 12,
@@ -116,26 +105,8 @@
       "image": "https://images.samsung.com/is/image/samsung/id-full-hd-n5000-ua43n5001akpxd-frontblack-145041782?$684_547_PNG$",
       "price": 3504600,
       "description": "Your favorite TV programs and movies get real. The rich and vivid texture of the Full HD images will take your breath away. Plug your favourite entertainment and media into your TV – watch videos, play music, or view photos through a USB connection.",
-      "condition": "good",
-      "categories": "electronics",
-      "tags": ["electronics", "tv"]
-    }
-  ],
-  "categories": [
-    {
-      "id": 1,
-      "name": "Fashion",
-      "tags": ["women", "men", "shoes", "accessories"]
-    },
-    {
-      "id": 2,
-      "name": "Furniture",
-      "tags": ["cabinet", "table", "chair"]
-    },
-    {
-      "id": 3,
-      "name": "Electronics",
-      "tags": ["handphone", "laptop", "tv"]
+      "condition": "excellent",
+      "category": "electronics"
     }
   ]
 }

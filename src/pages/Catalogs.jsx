@@ -16,7 +16,7 @@ export default function Catalogs() {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch(`${BASEURL}/product`);
+      const response = await fetch(`${BASEURL}/products`);
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
@@ -39,10 +39,8 @@ export default function Catalogs() {
     if (idx === 0) {
       setFilter(data);
     } else {
-      const category = categories[idx].toLowerCase();
-      const updateList = data.filter(
-        (product) => product.categories === category
-      );
+      const cat = categories[idx].toLowerCase();
+      const updateList = data?.filter((product) => product.category === cat);
       setFilter(updateList);
     }
   };
@@ -53,10 +51,8 @@ export default function Catalogs() {
     if (activeTabs === 0) {
       currProducts = data;
     } else {
-      const category = categories[activeTabs].toLowerCase();
-      const updateList = data.filter(
-        (product) => product.categories === category
-      );
+      const cat = categories[activeTabs].toLowerCase();
+      const updateList = data.filter((product) => product.category === cat);
       currProducts = updateList;
     }
 
@@ -66,11 +62,12 @@ export default function Catalogs() {
     setFilter(updateList);
   };
 
+  // TAB
   const FilterTab = () => {
     return (
       <>
         <ul className="categories nav nav-tabs d-flex justify-content-center mb-5">
-          {categories.map((category, idx) => (
+          {categories?.map((category, idx) => (
             <>
               <li class="nav-item" key={idx}>
                 <a
@@ -87,7 +84,8 @@ export default function Catalogs() {
       </>
     );
   };
-  // SHOW PRODUCT
+
+  // SIDEBAR
   const Sidebar = () => {
     return (
       <>
