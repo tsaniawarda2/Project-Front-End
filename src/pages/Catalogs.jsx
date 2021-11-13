@@ -94,7 +94,7 @@ export default function Catalogs() {
 
     return (
       <>
-        <div className="dropdown">
+        <div className="dropdown ms-5">
           <span
             className="dropdown-toggle"
             type="button"
@@ -129,8 +129,8 @@ export default function Catalogs() {
       <Navbar />
       <div className="container my-5">
         <Tab />
-        <Filter />
         <div className="d-flex justify-content-end">
+          <Filter />
           <Dropdown />
         </div>
         <div className="text-center">

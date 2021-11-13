@@ -31,39 +31,29 @@ export default function ListProduct(props) {
         return (
           <>
             <div className="col-md-4 gx-3 gy-5">
-              <div className="card h-100 text-center" key={idx}>
-                <div className="image-card">
-                  <img
-                    className="card-img-top"
-                    src={product.image}
-                    alt={product.name}
-                  />
+              <NavLink to={`/detail/${product?.id}`} className="link">
+                <div className="card h-100 text-center" key={idx}>
+                  <div className="image-card">
+                    <img
+                      className="card-img-top"
+                      src={product.image}
+                      alt={product.name}
+                    />
 
-                  {product.inStock ? (
-                    ""
-                  ) : (
-                    <img className="sold" src={Sold} alt="Sold" />
-                  )}
-                </div>
-
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text price">IDR {product.price}</p>
-                  <p className="card-text condition">{product.condition}</p>
-                  <button
-                    className="btn btn-outline-primary"
-                    disabled={!product.inStock}
-                  >
                     {product.inStock ? (
-                      <NavLink to={`/detail/${product?.id}`} className="link">
-                        <span>Read More</span>
-                      </NavLink>
+                      ""
                     ) : (
-                      <div>Out of Stock</div>
+                      <img className="sold" src={Sold} alt="Sold" />
                     )}
-                  </button>
+                  </div>
+
+                  <div className="card-body">
+                    <h5 className="card-title">{product.name}</h5>
+                    <p className="card-text price">IDR {product.price}</p>
+                    <p className="card-text condition">{product.condition}</p>
+                  </div>
                 </div>
-              </div>
+              </NavLink>
             </div>
           </>
         );
