@@ -1,86 +1,42 @@
-import {
-    FavoriteBorderOutlined,
-    SearchOutlined,
-    ShoppingCartOutlined,
-} from "@material-ui/icons";
+import React, { useContext } from "react";
+
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const Info = styled.div`
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
-`;
+import { SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
+
+import { Circle, Section, Image, Info, Icon } from "../assets/styles/product";
+import { DataContext } from "../context/DataProduct";
 
 const Container = styled.div`
-    flex: 1;
-    margin: 5px;
-    min-width: 280px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5fbfd;
-    position: relative;
-
-&:hover ${Info}{
-    opacity: 1;
-}`;
-
-const Circle = styled.div`
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
-const Image = styled.img`
-    height: 75%;
-    z-index: 2;`;
-
-const Icon = styled.div`
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    transition: all 0.5s ease;
-    &:hover {
-        background-color: #e9f5f5;
-        transform: scale(1.1);
-}`;
-
-const Product = ({ item }) => {
-    return (
-        <Container>
-            <Circle />
-            <Image src={item.img} />
-            <Info>
-                <Icon>
-                    <ShoppingCartOutlined />
-                </Icon>
-                <Icon>
-                    <SearchOutlined />
-                </Icon>
-                <Icon>
-                    <FavoriteBorderOutlined />
-                </Icon>
-            </Info>
-        </Container>
-    );
+const Products = () => {
+  const { data } = useContext(DataContext);
+  return (
+    <Container>
+      {data?.map((item, idx) => (
+        <Section key={idx}>
+          <Circle />
+          <Image src={item?.image} />
+          <Info>
+            <Icon>
+              <ShoppingCartOutlined />
+            </Icon>
+            <NavLink to={`/detail/${item?.id}`}>
+              <Icon>
+                <SearchOutlined />
+              </Icon>
+            </NavLink>
+          </Info>
+        </Section>
+      ))}
+    </Container>
+  );
 };
 
-export default Product;
+export default Products;
