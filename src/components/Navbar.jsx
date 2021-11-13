@@ -38,17 +38,17 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="./catalogs">
+                <NavLink className="nav-link" to="/catalogs">
                   Catalogs
                 </NavLink>
               </li>
             </ul>
             <div className="right row">
-              <NavLink to="./login" className="login me-3 col">
+              <NavLink to="/login" className="login me-3 col">
                 Login
               </NavLink>
 
-              <NavLink to="./register" className="register me-3 col">
+              <NavLink to="/register" className="register me-3 col">
                 Register
               </NavLink>
 

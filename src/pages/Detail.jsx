@@ -28,7 +28,7 @@ const Detail = () => {
 
   let { id } = useParams();
 
-  const product = data?.find((data) => data?.id === Number(id));
+  const product = data?.find((data) => data?.id === id);
 
   return (
     <>
@@ -66,7 +66,10 @@ const Detail = () => {
                     payload: product,
                   });
                 }}
-              ></button>
+                disabled={!product.inStock}
+              >
+                {!product.inStock ? "Out of Stock" : "Add to Cart"}
+              </button>
             )}
           </AddContainer>
         </InfoContainer>
