@@ -10,13 +10,12 @@ import {
   Checkout,
 } from "./pages";
 import NotFound from "./pages/errors/NotFound";
-// import HlmCatalog from "./pages/HlmCatalog";
 
 function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/catalogs" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/catalogs" component={Catalogs} />

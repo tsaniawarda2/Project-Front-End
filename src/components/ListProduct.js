@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import "../../assets/css/Catalogs.css";
-import Sold from "../../assets/image/sold.png";
+import { NavLink } from "react-router-dom";
+
+import "../assets/styles/catalogs.css";
+import Sold from "../assets/image/sold.png";
+import { DataContext } from "../context/DataProduct";
 
 export default function ListProduct(props) {
   const { data } = props;
 
+  const {
+    filterState: { sort },
+  } = useContext(DataContext);
+
+  // FILTER PRICE
+  const transformProducts = () => {
+    let sortedProducts = data;
+    console.log(sortedProducts, "---------sorted");
+    if (sort) {
+      sortedProducts = sortedProducts.sort((a, b) =>
+        sort === "lowToHigh" ? a.price - b.price : b.price - a.price
+      );
+    }
+    return sortedProducts;
+  };
+
   return (
     <div className="row justify-content-center">
-      {data?.map((product, idx) => {
+      {transformProducts()?.map((product, idx) => {
         return (
           <>
             <div className="col-md-4 gx-3 gy-5">
@@ -32,11 +51,13 @@ export default function ListProduct(props) {
                   <p className="card-text price">IDR {product.price}</p>
                   <p className="card-text condition">{product.condition}</p>
                   <button
-                    className="btn btn-primary"
+                    className="btn btn-outline-primary"
                     disabled={!product.inStock}
                   >
                     {product.inStock ? (
-                      <div>Add To Car</div>
+                      <NavLink to={`/detail/${product?.id}`} className="link">
+                        <span>Read More</span>
+                      </NavLink>
                     ) : (
                       <div>Out of Stock</div>
                     )}

@@ -1,23 +1,46 @@
-import styled from "styled-components";
-import { categories } from "../data";
-import { mobile } from "../responsive";
-import CategoryItem from "./CategoryItem";
-
-const Container = styled.div`
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    ${mobile({ padding: "0px", flexDirection:"column" })}
-`;
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import {
+  Button,
+  Container,
+  Image,
+  Info,
+  Section,
+  Title,
+} from "../assets/styles/categoryItem";
+import { BASEURL } from "../config/api";
 
 const Categories = () => {
-    return (
-        <Container>
-        {categories.map((item) => (
-            <CategoryItem item={item} key={item.id} />
-        ))}
-        </Container>
-    );
+  const [category, setCategory] = useState([]);
+
+  const getCategories = async () => {
+    try {
+      const response = await fetch(`${BASEURL}/categories`);
+      setCategory(await response.clone().json());
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  return (
+    <Container>
+      {category.map((item, idx) => (
+        <Section key={idx}>
+          <Image src={item.pict} />
+          <Info>
+            <Title>{item.category}</Title>
+            <NavLink to={`/catalogs/`}>
+              <Button>Belanja Sekarang</Button>
+            </NavLink>
+          </Info>
+        </Section>
+      ))}
+    </Container>
+  );
 };
 
 export default Categories;
