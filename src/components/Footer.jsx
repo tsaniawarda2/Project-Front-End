@@ -36,6 +36,32 @@ import {
   Title,
 } from "../assets/styles/footer";
 
+import {
+  Facebook,
+  Instagram,
+  MailOutline,
+  Phone,
+  Pinterest,
+  Room,
+  Twitter,
+} from "@material-ui/icons";
+
+import {
+  Center,
+  ContactItem,
+  Container,
+  Desc,
+  Left,
+  List,
+  ListItem,
+  Logo,
+  Payment,
+  Right,
+  SocialContainer,
+  SocialIcon,
+  Title,
+} from "../assets/styles/footer";
+
 export default function Footer() {
   return (
     <Container>

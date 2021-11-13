@@ -9,8 +9,8 @@ import {
   Cart,
   Checkout,
 } from "./pages";
-
 import NotFound from "./pages/errors/NotFound";
+// import HlmCatalog from "./pages/HlmCatalog";
 
 function App() {
   return (

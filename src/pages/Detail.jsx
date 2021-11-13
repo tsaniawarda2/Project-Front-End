@@ -1,116 +1,82 @@
-import { Add, Remove } from "@material-ui/icons";
-import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
+import { useParams } from "react-router";
+import { useContext } from "react";
+
+import {
+  AddContainer,
+  Amount,
+  AmountContainer,
+  Desc,
+  Image,
+  ImgContainer,
+  InfoContainer,
+  Price,
+  Title,
+  Wrapper,
+} from "../assets/styles/detail";
+
+import { DataContext } from "../context/DataProduct";
 import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
-import { mobile } from "../responsive";
-
-const Container = styled.div``;
-
-const Wrapper = styled.div`
-  padding: 50px;
-  display: flex;
-  ${mobile({ padding: "10px", flexDirection:"column" })}
-`;
-
-const ImgContainer = styled.div`
-  flex: 1;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 90vh;
-  object-fit: cover;
-  ${mobile({ height: "40vh" })}
-`;
-
-const InfoContainer = styled.div`
-  flex: 1;
-  padding: 0px 50px;
-  ${mobile({ padding: "10px" })}
-`;
-
-const Title = styled.h1`
-  font-weight: 200;
-`;
-
-const Desc = styled.p`
-  margin: 20px 0px;
-`;
-
-const Price = styled.span`
-  font-weight: 100;
-  font-size: 40px;
-`;
-
-const AddContainer = styled.div`
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  ${mobile({ width: "100%" })}
-`;
-
-const AmountContainer = styled.div`
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-`;
-
-const Amount = styled.span`
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid teal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 5px;
-`;
-
-const Button = styled.button`
-  padding: 15px;
-  border: 2px solid teal;
-  background-color: white;
-  cursor: pointer;
-  font-weight: 500;
-
-  &:hover{
-      background-color: #f8f4f4;
-  }
-`;
+import Footer from "../components/Footer";
 
 const Detail = () => {
+  const {
+    state: { cart },
+    dispatch,
+  } = useContext(DataContext);
+
+  const { data } = useContext(DataContext);
+
+  let { id } = useParams();
+
+  console.log(data, "-----id");
+  const product = data?.find((data) => data?.id === Number(id));
+
   return (
-    <Container>
+    <>
       <Navbar />
-      <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" />
+          <Image src={product?.image} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Nike Sneaker</Title>
-          <Desc>
-            Dibangun untuk kecepatan dan ketahanan, sneaker dari Nike ini dirancang
-            untuk memberikan teknologi penerbangan tepat di bawah kaki anda untuk memberikan
-            energi output yang maksimal.
-          </Desc>
-          <Price>Rp. 100.000</Price>
+          <Title>{product?.name}</Title>
+          <Desc>{product?.description}</Desc>
+          <Price>IDR {product?.price}</Price>
+          <AmountContainer>
+            <Amount>{product?.condition}</Amount>
+          </AmountContainer>
           <AddContainer>
-            <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
-            </AmountContainer>
-            <Button>ADD TO CART</Button>
+            {cart.some((p) => p.id === product.id) ? (
+              <button
+                className="btn btn-danger"
+                onClick={() =>
+                  dispatch({
+                    type: "REMOVE_FROM_CART",
+                    payload: product,
+                  })
+                }
+              >
+                Remove from Cart
+              </button>
+            ) : (
+              <button
+                className="btn btn-dark"
+                onClick={() => {
+                  dispatch({
+                    type: "ADD_TO_CART",
+                    payload: product,
+                  });
+                }}
+                disabled={!product.inStock}
+              >
+                {!product.inStock ? "Out of Stock" : "Add to Cart"}
+              </button>
+            )}
           </AddContainer>
         </InfoContainer>
       </Wrapper>
-      <Newsletter />
       <Footer />
-    </Container>
+    </>
   );
 };
 
