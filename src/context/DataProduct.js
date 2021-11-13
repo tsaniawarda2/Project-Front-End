@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useReducer, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { BASEURL } from "../config/api";
 // import { filterReducer } from "../pages/filter/Reducers";
 import { cartReducer } from "./Reducers";
@@ -30,8 +36,8 @@ const DataProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(cartReducer, {
     products: data,
-    cart : []
-  })
+    cart: [],
+  });
 
   return (
     <DataContext.Provider value={{ state, dispatch, data, filter, loading }}>

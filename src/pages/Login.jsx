@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -66,7 +66,7 @@ const Login = () => {
           <Input placeholder="username" />
           <Input placeholder="password" />
           <Button>Login</Button>
-          <Link>Don't Have an Account?  </Link>
+          <Link>Don't Have an Account? </Link>
           <Link>Create Here</Link>
         </Form>
       </Wrapper>
