@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router";
-import Breadcrumb from "./components/Breadcrumb";
 
 import {
   Home,
@@ -15,7 +14,7 @@ import NotFound from "./pages/errors/NotFound";
 
 function App() {
   return (
-    <div>
+    <>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
@@ -26,7 +25,7 @@ function App() {
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="*" component={NotFound} />
       </Switch>
-    </div>
+    </>
   );
 }
 

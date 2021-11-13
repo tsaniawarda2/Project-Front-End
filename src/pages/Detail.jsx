@@ -20,8 +20,8 @@ import Footer from "../components/Footer";
 
 const Detail = () => {
   const {
-    state : {cart} ,
-    dispatch
+    state: { cart },
+    dispatch,
   } = useContext(DataContext);
 
   const { data } = useContext(DataContext);
@@ -47,30 +47,31 @@ const Detail = () => {
           </AmountContainer>
           <AddContainer>
             {cart.some((p) => p.id === product.id) ? (
-            <button className="btn btn-danger"
-              onClick={() =>
-                dispatch({
-                  type: "REMOVE_FROM_CART",
-                  payload: product,
-                })
-              }
-            >
-              Remove from Cart
-            </button>
-          ) : (
-            <button className="btn btn-dark"
-              onClick={() =>{
-                dispatch({
-                  type: "ADD_TO_CART",
-                  payload: product,
-                })
-              }
-              }
-              disabled={!product.inStock}
-            >
-              {!product.inStock ? "Out of Stock" : "Add to Cart"} 
-            </button>
-          )}
+              <button
+                className="btn btn-danger"
+                onClick={() =>
+                  dispatch({
+                    type: "REMOVE_FROM_CART",
+                    payload: product,
+                  })
+                }
+              >
+                Remove from Cart
+              </button>
+            ) : (
+              <button
+                className="btn btn-dark"
+                onClick={() => {
+                  dispatch({
+                    type: "ADD_TO_CART",
+                    payload: product,
+                  });
+                }}
+                disabled={!product.inStock}
+              >
+                {!product.inStock ? "Out of Stock" : "Add to Cart"}
+              </button>
+            )}
           </AddContainer>
         </InfoContainer>
       </Wrapper>
