@@ -1,0 +1,23 @@
+.FormComponent-formContainer-1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fefae0;
+}
+
+.FormComponent-form-2 {
+  padding: 10px;
+  min-height: 350px;
+  height: auto;
+}
+
+.FormComponent-formTitle-3{
+  text-align: center;
+  margin: "10px 0px 30px 0px";
+}
+
+.FormComponent-steps-4{
+  padding: 16px;
+}
