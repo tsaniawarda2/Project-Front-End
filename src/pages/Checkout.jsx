@@ -1,131 +1,145 @@
-import React from "react"
-import { useState, useEffect } from "react";
-import { CartState } from "../context/Context";
+import React, { useState} from "react";
+import {
+  Box,
+  Grid,
+  Paper,
+  Stepper,
+  Step,
+  StepLabel,
+} from "@material-ui/core";
+import Step1 from "../components/Steps/step1";
+import Step2 from "../components/Steps/step2";
+import Step3 from "../components/Steps/step3";
+import FinalStep from "../components/Steps/FinalStep";
+import { renderText } from "../components/Steps/checkout";
+import "../assets/styles/checkout.css"
 
-const Checkout = () => {
-		const {
-			state: { cart },
-			dispatch,
-		} = CartState();
-		const [total, setTotal] = useState();
-	
-		useEffect(() => {
-			setTotal(
-				cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
-			);
-		}, [cart]);
+function Checkout() { 
+  const data = {
+    firstName: "",
+    lastName: "",
+    address: "",
+    phone: "",
+    email: "",
+    paymentMethod: "",
+    cardNumber: "",
+    expiryDate: "",
+    cvv: "",
+  }
 
-    return(
-        <div className="checkout">
-					<div className="checkout-title mx-5 mt-5">
-						<h3><b>Checkout</b></h3>
-					</div>
-					<div className="row container-fluid">
-						<div className="col-md-8">
-							<div class="card">
-								<h5 class="card-header">Shipping Address</h5>
-								<div class="card-body">
-									<h5 class="card-title">Devi Ayu Lestari</h5>
-									<h6 class="card-title">081573081234</h6>
-									<p class="card-text">Jl. GA Mawar Melati Rt. 99 Rw.00, Kab. Bandung Barat, Jawa Barat. 40553</p>
-									<a href="#" class="btn btn-primary">Change</a>
-								</div>
-							</div>
+  const steps = [
+    { label: "Shipping Data" },
+    { label: "Payment Details" },
+    { label: "Order Review" }
+  ]
+  const [stepCount, setStepCount] = useState(0)
 
-							<div className="productContainer">
-								<ul className="list-group">
-									{cart.map((product) => (
-										<li className="list-group-item cartitem" key={product.id}>
-											<div className="row">
-												<div className="col-md-4">
-													<img src={product.image} alt={product.name} fluid rounded width="200" height="200" />
-												</div>
-												<div className="col-md-2">
-													<span>{product.name}</span>
-												</div>
-												<div className="col-md-2">IDR {product.price}</div>
-												<div className="col-md-2">
-													<select form-control
-														as="select"
-														value={product.qty}
-														onChange={(e) =>
-															dispatch({
-																type: "CHANGE_CART_QTY",
-																payload: {
-																	id: product.id,
-																	qty: e.target.value,
-																},
-															})
-														}
-													>
-														{[...Array(product.inStock).keys()].map((x) => (
-															<option key={x + 1}>{x + 1}</option>
-														))}
-													</select>
-												</div>
-												<div className="col-md-2">
-													<button className="btn btn-dark"
-														type="button"
-														variant="light"
-														onClick={() =>
-															dispatch({
-																type: "REMOVE_FROM_CART",
-																payload: product,
-															})
-														}
-													>
-													</button>
-												</div>
-											</div>
-										</li>
-									))}
-								</ul>
-							</div>
-						</div>
-						<div className="col-md-4">
-							<div class="card">
-								<h5 class="card-header">Shopping Summary</h5>
-								<div class="card-body">
-								<table class="table table-borderless">
-										<tr>
-											<td>Product Item (1)</td>
-											<td>IDR 100.000</td>
-										</tr>
-										<tr>
-											<td>Shipping Cost</td>
-											<td>IDR. 15.000</td>
-										</tr>
-										<tr>
-											<td><b>Total</b></td>
-											<td><b>IDR. {total}</b></td>
-										</tr>
-								</table>
-									<form className="payment my-4">
-										<h5>Choose Payment Method</h5>
-										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-											<label class="form-check-label" for="inlineRadio1">BCA</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-											<label class="form-check-label" for="inlineRadio2">BRI</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-											<label class="form-check-label" for="inlineRadio2">DANA</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-											<label class="form-check-label" for="inlineRadio2">GOPAY</label>
-										</div>
-									</form>
-									<button class="btn btn-primary" style={{width: "100%"}}>Pay</button>
-								</div>
-							</div>
-						</div>
-					</div>
-        </div>
-    )
+  const [state, setState] = useState ({
+		data: data,
+    errors : {},
+    steps: steps,
+	})
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log("form submitted");
+    };
+
+    const handleOnChange = ({ target }) => {
+      const { data, errors } = state;
+
+      // target.value.length <= 3
+      //   ? (errors[target.name] = `${target.name} have at least 3 letter`)
+      //   : (errors[target.name] = "");
+
+      data[target.name] = target.value;
+      setState({ data, errors });
+    };
+
+    const handleNextStep = () => {
+      let newCount = stepCount
+      newCount = newCount + 1
+      console.log(newCount, "from handle next");
+      setStepCount(newCount)
+    };
+
+    const handleBackStep = () => {
+      let newCount = stepCount
+      newCount = newCount - 1
+      console.log(newCount, "from handle next");
+      setStepCount(newCount)
+    };
+
+    const getStepContent = (step) => {
+      switch (step) {
+        case 0:
+          return (
+            <Step1
+              state={state}
+              handleChange={handleOnChange}
+              handleNext={handleNextStep}
+            />
+          );
+        case 1:
+          return (
+            <Step2
+              state={state}
+              handleChange={handleOnChange}
+              handleNext={handleNextStep}
+              handlePrev={handleBackStep}
+            />
+          );
+        case 2:
+          return (
+            <Step3
+              state={state}
+              handleChange={handleOnChange}
+              handleNext={handleNextStep}
+              handlePrev={handleBackStep}
+              handleSubmit={handleSubmit}
+            />
+          );
+        case 3:
+          return <FinalStep data={state.data} />;
+        default:
+          return (
+            <Step1
+              state={state}
+              handleChange={handleOnChange}
+              handleNext={handleNextStep}
+            />
+          );
+      }
+    };
+
+  return(
+
+      <Grid container className="FormComponent-formContainer-1">
+        {console.log(stepCount, "count from return")}
+        <Grid item xs={12} sm={7}>
+          <form onSubmit={handleSubmit} className="FormComponent-form-2">
+            <Paper component={Box} mb={1}>
+              <Box pt={2}>
+                {renderText({
+                  type: "h6",
+                  // color: "primary",
+                  label: "Checkout",
+                  align: "center",
+                })}
+              </Box>
+              <Stepper activeStep={stepCount} alternativeLabel>
+                {steps.map((item) => (
+                  <Step key={item.label} >
+                    <StepLabel>{item.label}</StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+            </Paper>
+            {getStepContent(stepCount)}
+          </form>
+        </Grid>
+      </Grid>
+  )
 }
 
-export default Checkout
+export default Checkout;
