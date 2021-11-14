@@ -1,33 +1,32 @@
 import { useContext } from "react";
 import { DataContext } from "../context/DataProduct";
-
+import "../assets/styles/filter.css";
 const Filter = () => {
   const {
     filterState: { sort },
     filterDispatch,
   } = useContext(DataContext);
-  console.log(sort, "----------state");
   return (
     <>
       <div className="dropdown">
         <span
-          className="dropdown-toggle"
+          className="selected"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Price
+          Price<i class="fas fa-angle-down icon"></i>
         </span>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <ul className="dropdown-menu">
           <li className="ps-2">
             {/* Ascending */}
             <div class="form-check form-check-inline">
               <input
                 class="form-check-input"
-                type="radio"
+                type="checkbox"
                 name="sort-ascending"
-                id="inlineRadio1"
+                id="flexCheckDefault1"
                 value="option1"
                 onChange={() =>
                   filterDispatch({
@@ -37,7 +36,7 @@ const Filter = () => {
                 }
                 checked={sort === "lowToHigh" ? true : false}
               />
-              <label class="form-check-label" for="inlineRadio1">
+              <label class="form-check-label" for="flexCheckDefault1">
                 Low-High
               </label>
             </div>
@@ -47,9 +46,9 @@ const Filter = () => {
             <div class="form-check form-check-inline">
               <input
                 class="form-check-input"
-                type="radio"
+                type="checkbox"
                 name="sort-descending"
-                id="inlineRadio2"
+                id="flexCheckDefault2"
                 value="option2"
                 onChange={() =>
                   filterDispatch({
@@ -59,7 +58,7 @@ const Filter = () => {
                 }
                 checked={sort === "highToLow" ? true : false}
               />
-              <label class="form-check-label" for="inlineRadio2">
+              <label class="form-check-label" for="flexCheckDefault2">
                 High-Low
               </label>
             </div>

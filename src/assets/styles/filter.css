@@ -1,0 +1,24 @@
+.dropdown-menu.show {
+  padding-right: 0px;
+  min-width: 120px;
+}
+
+.selected.show .icon {
+  transform: rotate(180deg);
+  left: 44px;
+}
+
+.selected.show .icon-cond {
+  transform: rotate(180deg);
+  left: 86px;
+}
+.icon,
+.icon-cond {
+  position: absolute;
+  padding-left: 10px;
+  top: 6px;
+}
+
+.ps-2 {
+  padding: 0;
+}

@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Filter from "../components/Filter";
 
 import "../assets/styles/catalogs.css";
+import "../assets/styles/filter.css";
 
 const categories = ["All", "Fashion", "Furniture", "Electronics", "Accesories"];
 const condition = ["Excellent", "Very good", "Good", "Moderate"];
@@ -96,13 +97,13 @@ export default function Catalogs() {
       <>
         <div className="dropdown ms-5">
           <span
-            className="dropdown-toggle"
+            className="selected"
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Conditions
+            Conditions<i class="fas fa-angle-down icon-cond"></i>
           </span>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {condition?.map((cond, idx) => (
