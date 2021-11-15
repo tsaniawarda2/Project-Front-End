@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+=======
+import {
+  Facebook,
+  Instagram,
+  MailOutline,
+  Phone,
+  Pinterest,
+  Room,
+  Twitter,
+} from "@material-ui/icons";
+import styled from "styled-components";
+import { mobile } from "../responsive";
+
+import {
+  Facebook,
+  Instagram,
+  MailOutline,
+  Phone,
+  Pinterest,
+  Room,
+  Twitter,
+} from "@material-ui/icons";
+
+import {
+  Center,
+  ContactItem,
+  Container,
+  Desc,
+  Left,
+  List,
+  ListItem,
+  Logo,
+  Payment,
+  Right,
+  SocialContainer,
+  SocialIcon,
+  Title,
+} from "../assets/styles/footer";
+
+>>>>>>> b123e3da8b3bf9f59a7c4c2b4d5095b740104110
 import {
   Facebook,
   Instagram,

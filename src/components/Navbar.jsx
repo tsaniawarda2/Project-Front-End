@@ -8,6 +8,12 @@ import { DataContext } from "../context/DataProduct";
 
 import "../assets/styles/navbar.css";
 
+import { Badge } from "@material-ui/core";
+import { ShoppingCartOutlined } from "@material-ui/icons";
+import { NavLink } from "react-router-dom";
+
+import "../assets/css/navbar.css";
+
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
 
