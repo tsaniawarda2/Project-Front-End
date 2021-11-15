@@ -17,8 +17,7 @@ const Login = () => {
           <Input placeholder="username" />
           <Input placeholder="password" />
           <Button>Login</Button>
-          <Link>Don't Have an Account? </Link>
-          <Link>Create Here</Link>
+          <h6>Don't Have an Account? <a href="./Register">Click here</a></h6>
         </Form>
       </Wrapper>
     </Container>

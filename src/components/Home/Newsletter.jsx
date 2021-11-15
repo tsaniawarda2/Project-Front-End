@@ -41,7 +41,7 @@ const Input = styled.input`
 const Button = styled.button`
   flex: 1;
   border: none;
-  background-color: #f25e74;
+  background-color: #FFAE01;
   color: white;
 `;
 
@@ -49,7 +49,7 @@ const Newsletter = () => {
   return (
     <Container>
       <Title>Newsletter</Title>
-      <Desc>Dapatkan update terbaru dari produk favoritmu.</Desc>
+      <Desc>Get timely updates from your favorite products.</Desc>
       <InputContainer>
         <Input placeholder="Your email" />
         <Button>
