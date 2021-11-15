@@ -1,9 +1,28 @@
-import React from "react";
+import {
+  Button,
+  Form,
+  Input,
+  Link,
+  Container,
+  Title,
+  Wrapper,
+} from "../assets/styles/login";
 
-export default function Login() {
+const Login = () => {
   return (
-    <>
-      <div className="container">Login Page</div>;
-    </>
+    <Container>
+      <Wrapper>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input placeholder="username" />
+          <Input placeholder="password" />
+          <Button>Login</Button>
+          <Link>Don't Have an Account? </Link>
+          <Link>Create Here</Link>
+        </Form>
+      </Wrapper>
+    </Container>
   );
-}
+};
+
+export default Login;
