@@ -10,11 +10,10 @@ import {
   Checkout,
 } from "./pages";
 import NotFound from "./pages/errors/NotFound";
-// import HlmCatalog from "./pages/HlmCatalog";
 
 function App() {
   return (
-    <div>
+    <>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
@@ -25,7 +24,7 @@ function App() {
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="*" component={NotFound} />
       </Switch>
-    </div>
+    </>
   );
 }
 
