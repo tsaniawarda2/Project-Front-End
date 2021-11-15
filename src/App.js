@@ -9,6 +9,7 @@ import {
   Cart,
   Checkout,
 } from "./pages";
+
 import NotFound from "./pages/errors/NotFound";
 
 function App() {
