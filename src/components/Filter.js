@@ -19,7 +19,7 @@ const Filter = () => {
           Price<i class="fas fa-angle-down icon"></i>
         </span>
         <ul className="dropdown-menu">
-          <li className="ps-2">
+          <li className="form form1">
             {/* Ascending */}
             <div class="form-check form-check-inline">
               <input
@@ -41,7 +41,7 @@ const Filter = () => {
               </label>
             </div>
           </li>
-          <li className="ps-2">
+          <li className="form">
             {/* Descending */}
             <div class="form-check form-check-inline">
               <input

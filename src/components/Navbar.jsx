@@ -10,11 +10,10 @@ import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
-  // console.log(cart.cart, "from navbar");
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
         <div className="container">
           <NavLink exact className="navbar-brand fw-bold fs-4 logo" to="/">
             <h1>BuyMePlease</h1>
@@ -51,12 +50,6 @@ export default function Navbar() {
               <NavLink to="/register" className="register me-3 col">
                 Register
               </NavLink>
-
-              {/* <NavLink to="./cart" className="cart col">
-                <Badge badgeContent={4} color="primary">
-                  <ShoppingCartOutlined />
-                </Badge>
-              </NavLink> */}
 
               <div className="cart-nav dropdown col">
                 <button

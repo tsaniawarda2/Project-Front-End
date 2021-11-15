@@ -1,18 +1,7 @@
 import { useParams } from "react-router";
 import { useContext } from "react";
 
-import {
-  AddContainer,
-  Amount,
-  AmountContainer,
-  Desc,
-  Image,
-  ImgContainer,
-  InfoContainer,
-  Price,
-  Title,
-  Wrapper,
-} from "../assets/styles/detail";
+import "../assets/styles/detail.css";
 
 import { DataContext } from "../context/DataProduct";
 import Navbar from "../components/Navbar";
@@ -33,47 +22,52 @@ const Detail = () => {
   return (
     <>
       <Navbar />
-      <Wrapper>
-        <ImgContainer>
-          <Image src={product?.image} />
-        </ImgContainer>
-        <InfoContainer>
-          <Title>{product?.name}</Title>
-          <Desc>{product?.description}</Desc>
-          <Price>IDR {product?.price}</Price>
-          <AmountContainer>
-            <Amount>{product?.condition}</Amount>
-          </AmountContainer>
-          <AddContainer>
-            {cart.some((p) => p.id === product.id) ? (
-              <button
-                className="btn btn-danger"
-                onClick={() =>
-                  dispatch({
-                    type: "REMOVE_FROM_CART",
-                    payload: product,
-                  })
-                }
-              >
-                Remove from Cart
-              </button>
-            ) : (
-              <button
-                className="btn btn-dark"
-                onClick={() => {
-                  dispatch({
-                    type: "ADD_TO_CART",
-                    payload: product,
-                  });
-                }}
-                disabled={!product.inStock}
-              >
-                {!product.inStock ? "Out of Stock" : "Add to Cart"}
-              </button>
-            )}
-          </AddContainer>
-        </InfoContainer>
-      </Wrapper>
+      <div className="container">
+        <div className="wrapper">
+          <div className="image-container text-center">
+            <img src={product?.image} alt={product?.name} id="detail-img" />
+          </div>
+          <div className="info">
+            <h1>{product?.name}</h1>
+            <p>{product?.description}</p>
+            <span className="price">IDR {product?.price}</span>
+            <div className="condition">
+              <span className="decs-cond">
+                <i class="fa fa-info-circle icon-detail" aria-hidden="true"></i>
+                {product?.condition}
+              </span>
+            </div>
+            <div className="add-container">
+              {cart.some((p) => p.id === product.id) ? (
+                <button
+                  className="btn btn-danger"
+                  onClick={() =>
+                    dispatch({
+                      type: "REMOVE_FROM_CART",
+                      payload: product,
+                    })
+                  }
+                >
+                  Remove from Cart
+                </button>
+              ) : (
+                <button
+                  className="btn btn-outline-dark"
+                  onClick={() => {
+                    dispatch({
+                      type: "ADD_TO_CART",
+                      payload: product,
+                    });
+                  }}
+                  disabled={!product.inStock}
+                >
+                  {!product.inStock ? "Out of Stock" : "Add to Cart"}
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
       <Footer />
     </>
   );

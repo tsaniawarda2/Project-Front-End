@@ -33,7 +33,7 @@ export default function ListProduct(props) {
           .map((product, idx) => {
             return (
               <>
-                <div className="col-md-4 gx-3 gy-5 in-stock">
+                <div className="col-lg-4 col-md-6 in-stock">
                   <NavLink to={`/detail/${product?.id}`} className="link">
                     <div className="card h-100 text-center" key={idx}>
                       <div className="image-card">
@@ -53,7 +53,11 @@ export default function ListProduct(props) {
                       <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>
                         <p className="card-text price">IDR {product.price}</p>
-                        <p className="card-text condition">
+                        <p className="card-text cond-list">
+                          <i
+                            class="fa fa-info-circle icon-list"
+                            aria-hidden="true"
+                          ></i>
                           {product.condition}
                         </p>
                       </div>
@@ -68,7 +72,7 @@ export default function ListProduct(props) {
           .map((product, idx) => {
             return (
               <>
-                <div className="col-md-4 gx-3 gy-5 out-stock">
+                <div className="col-lg-4 col-md-6 out-stock">
                   <NavLink to={`/detail/${product?.id}`} className="link">
                     <div className="card h-100 text-center" key={idx}>
                       <div className="image-card">
@@ -88,7 +92,11 @@ export default function ListProduct(props) {
                       <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>
                         <p className="card-text price">IDR {product.price}</p>
-                        <p className="card-text condition">
+                        <p className="card-text cond-list">
+                          <i
+                            class="fa fa-info-circle icon-list"
+                            aria-hidden="true"
+                          ></i>
                           {product.condition}
                         </p>
                       </div>
