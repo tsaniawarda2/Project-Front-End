@@ -2,8 +2,8 @@ import { Route, Switch } from "react-router";
 
 import {
   Home,
-  Login,
-  Register,
+  SignIn,
+  SignUp,
   Catalogs,
   Detail,
   Cart,
@@ -16,8 +16,8 @@ function App() {
     <>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/signUp" component={SignUp} />
+        <Route exact path="/signIn" component={SignIn} />
         <Route exact path="/catalogs" component={Catalogs} />
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/checkout" component={Checkout} />
