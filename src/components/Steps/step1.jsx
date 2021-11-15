@@ -8,13 +8,12 @@ import {
 } from "./checkout";
 
 const Step1 = ({ state, handleChange, handleNext }) => {
-  console.log(state, "from step1");
+  // console.log(state, "from step1");
   const [data, setData] = useState({
     firstName: state?.data?.firstName || "",
     lastName: state?.data?.lastName || "",
     address: state?.data?.address || "",
     phone: state?.data?.phone || "",
-    email: state?.data?.email || "",
   })
 
   const [isDisabled, setIsDisabled] = useState(true)
@@ -25,7 +24,6 @@ const Step1 = ({ state, handleChange, handleNext }) => {
       lastName: state?.data?.lastName,
       address: state?.data?.address,
       phone: state?.data?.phone,
-      email: state?.data?.email,
     })
     validatedInput()
   },[state])
@@ -46,9 +44,6 @@ const Step1 = ({ state, handleChange, handleNext }) => {
     if(!data?.phone){
       isValid = false
     }
-    if(!data?.email){
-      isValid = false
-    }
     if(isValid){
       setIsDisabled(false)
     } else{
@@ -59,8 +54,8 @@ const Step1 = ({ state, handleChange, handleNext }) => {
   // console.log(state);
   return (
     <Paper className="FormComponent-steps-4">
-      {console.log(state, "from return")}
-      <Box mt={2} mb={2}>
+      {/* {console.log(state, "from return")} */}
+      <Box mt={2} mb={2} className="shipping-data">
         {renderText({
           label: "Shipping Data",
           type: "h6",
@@ -98,20 +93,11 @@ const Step1 = ({ state, handleChange, handleNext }) => {
         </Grid>
       </Grid>
       <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12}>
           {renderInputField({
             state,
             name: "phone",
             label: "Phone",
-            onChange: handleChange,
-          })}
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          {renderInputField({
-            state,
-            name: "email",
-            label: "Email",
-            type: "email",
             onChange: handleChange,
           })}
         </Grid>
