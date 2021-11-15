@@ -22,7 +22,6 @@ const Detail = () => {
   return (
     <>
       <Navbar />
-<<<<<<< HEAD
       <div className="container">
         <div className=" row wrapper">
           <div className="col-lg-6 col-md-12">
@@ -76,49 +75,6 @@ const Detail = () => {
           </div>
         </div>
       </div>
-=======
-      <Wrapper>
-        <ImgContainer>
-          <Image src={product?.image} />
-        </ImgContainer>
-        <InfoContainer>
-          <Title>{product?.name}</Title>
-          <Desc>{product?.description}</Desc>
-          <Price>IDR {product?.price}</Price>
-          <AmountContainer>
-            <Amount>{product?.condition}</Amount>
-          </AmountContainer>
-          <AddContainer>
-            {cart.some((p) => p.id === product.id) ? (
-              <button
-                className="btn btn-danger"
-                onClick={() =>
-                  dispatch({
-                    type: "REMOVE_FROM_CART",
-                    payload: product,
-                  })
-                }
-              >
-                Remove from Cart
-              </button>
-            ) : (
-              <button
-                className="btn btn-dark"
-                onClick={() => {
-                  dispatch({
-                    type: "ADD_TO_CART",
-                    payload: product,
-                  });
-                }}
-                disabled={!product.inStock}
-              >
-                {!product.inStock ? "Out of Stock" : "Add to Cart"}
-              </button>
-            )}
-          </AddContainer>
-        </InfoContainer>
-      </Wrapper>
->>>>>>> b123e3da8b3bf9f59a7c4c2b4d5095b740104110
       <Footer />
     </>
   );
