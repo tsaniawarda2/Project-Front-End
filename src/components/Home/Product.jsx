@@ -5,8 +5,14 @@ import styled from "styled-components";
 
 import { SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
 
-import { Circle, Section, Image, Info, Icon } from "../assets/styles/product";
-import { DataContext } from "../context/DataProduct";
+import {
+  Circle,
+  Section,
+  Image,
+  Info,
+  Icon,
+} from "../../assets/styles/product";
+import { DataContext } from "../../context/DataProduct";
 
 const Container = styled.div`
   padding: 20px;

@@ -26,49 +26,88 @@ export default function ListProduct(props) {
   };
 
   return (
-    <div className="row justify-content-center">
-      {transformProducts()?.map((product, idx) => {
-        return (
-          <>
-            <div className="col-md-4 gx-3 gy-5">
-              <div className="card h-100 text-center" key={idx}>
-                <div className="image-card">
-                  <img
-                    className="card-img-top"
-                    src={product.image}
-                    alt={product.name}
-                  />
+    <>
+      <div className="row justify-content-center">
+        {transformProducts()
+          ?.filter((stock) => stock.inStock)
+          .map((product, idx) => {
+            return (
+              <>
+                <div className="col-lg-4 col-md-6 in-stock">
+                  <NavLink to={`/detail/${product?.id}`} className="link">
+                    <div className="card h-100 text-center" key={idx}>
+                      <div className="image-card">
+                        <img
+                          className="card-img-top"
+                          src={product.image}
+                          alt={product.name}
+                        />
 
-                  {product.inStock ? (
-                    ""
-                  ) : (
-                    <img className="sold" src={Sold} alt="Sold" />
-                  )}
-                </div>
+                        {product.inStock ? (
+                          ""
+                        ) : (
+                          <img className="sold" src={Sold} alt="Sold" />
+                        )}
+                      </div>
 
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text price">IDR {product.price}</p>
-                  <p className="card-text condition">{product.condition}</p>
-                  <button
-                    className="btn btn-outline-primary"
-                    disabled={!product.inStock}
-                  >
-                    {product.inStock ? (
-                      <NavLink to={`/detail/${product?.id}`} className="link">
-                        <span>Read More</span>
-                      </NavLink>
-                    ) : (
-                      <div>Out of Stock</div>
-                    )}
-                  </button>
+                      <div className="card-body">
+                        <h5 className="card-title">{product.name}</h5>
+                        <p className="card-text price">IDR {product.price}</p>
+                        <p className="card-text cond-list">
+                          <i
+                            class="fa fa-info-circle icon-list"
+                            aria-hidden="true"
+                          ></i>
+                          {product.condition}
+                        </p>
+                      </div>
+                    </div>
+                  </NavLink>
                 </div>
-              </div>
-            </div>
-          </>
-        );
-      })}
-    </div>
+              </>
+            );
+          })}
+        {transformProducts()
+          ?.filter((stock) => !stock.inStock)
+          .map((product, idx) => {
+            return (
+              <>
+                <div className="col-lg-4 col-md-6 out-stock">
+                  <NavLink to={`/detail/${product?.id}`} className="link">
+                    <div className="card h-100 text-center" key={idx}>
+                      <div className="image-card">
+                        <img
+                          className="card-img-top"
+                          src={product.image}
+                          alt={product.name}
+                        />
+
+                        {product.inStock ? (
+                          ""
+                        ) : (
+                          <img className="sold" src={Sold} alt="Sold" />
+                        )}
+                      </div>
+
+                      <div className="card-body">
+                        <h5 className="card-title">{product.name}</h5>
+                        <p className="card-text price">IDR {product.price}</p>
+                        <p className="card-text cond-list">
+                          <i
+                            class="fa fa-info-circle icon-list"
+                            aria-hidden="true"
+                          ></i>
+                          {product.condition}
+                        </p>
+                      </div>
+                    </div>
+                  </NavLink>
+                </div>
+              </>
+            );
+          })}
+      </div>
+    </>
   );
 }
 

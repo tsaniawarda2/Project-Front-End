@@ -7,8 +7,8 @@ import {
   Info,
   Section,
   Title,
-} from "../assets/styles/categoryItem";
-import { BASEURL } from "../config/api";
+} from "../../assets/styles/categoryItem";
+import { BASEURL } from "../../config/api";
 
 const Categories = () => {
   const [category, setCategory] = useState([]);

@@ -9,6 +9,9 @@ import Footer from "../components/Footer";
 import Filter from "../components/Filter";
 
 import "../assets/styles/catalogs.css";
+import "../assets/styles/filter.css";
+
+import Image from "../assets/image/banner.png";
 
 const categories = ["All", "Fashion", "Furniture", "Electronics", "Accesories"];
 const condition = ["Excellent", "Very good", "Good", "Moderate"];
@@ -55,7 +58,7 @@ export default function Catalogs() {
     };
     return (
       <>
-        <ul className="categories nav d-flex justify-content-center mb-5">
+        <ul className="categories nav d-flex justify-content-center mb-5 sticky-top">
           {categories?.map((category, idx) => (
             <>
               <li className="nav-item" key={idx}>
@@ -64,7 +67,7 @@ export default function Catalogs() {
                   to="#"
                   onClick={() => filterProduct(idx)}
                 >
-                  <span>{category}</span>
+                  <span className="link-cat">{category}</span>
                 </NavLink>
               </li>
             </>
@@ -94,15 +97,15 @@ export default function Catalogs() {
 
     return (
       <>
-        <div className="dropdown">
+        <div className="dropdown ms-5">
           <span
-            className="dropdown-toggle"
+            className="selected"
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Conditions
+            Conditions<i class="fas fa-angle-down icon-cond"></i>
           </span>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {condition?.map((cond, idx) => (
@@ -127,18 +130,22 @@ export default function Catalogs() {
   return (
     <>
       <Navbar />
-      <div className="container my-5">
+      <div className="parallax"></div>
+
+      <section>
         <Tab />
-        <Filter />
-        <div className="d-flex justify-content-end">
-          <Dropdown />
-        </div>
-        <div className="text-center">
-          <div className="listProduct">
-            {loading ? <Loading /> : <ListProduct data={filter} />}
+        <div className="container my-5">
+          <div className="select-filter d-flex justify-content-end">
+            <Filter />
+            <Dropdown />
+          </div>
+          <div className="text-center">
+            <div className="listProduct">
+              {loading ? <Loading /> : <ListProduct data={filter} />}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </>
   );
