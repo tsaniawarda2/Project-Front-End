@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.dropdown-menu {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+.dropdown-menu.show {
+  min-width: 101px;
+  background-color: #f8fdff;
+}
+.form {
+  margin-bottom: -3px;
+  padding-left: 12px;
+}
+.form1 {
+  padding-top: 4px;
+}
+.form-check-inline {
+  margin-right: 0;
+}
+.selected.show .icon {
+  transform: rotate(180deg);
+  left: 50px;
+}
+
+.selected.show .icon-cond {
+  transform: rotate(180deg);
+  left: 94px;
+}
+.icon,
+.icon-cond {
+  position: absolute;
+  padding-left: 10px;
+  top: 5px;
+}
+
+.form-check-input:checked {
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: #3473c5;
+}

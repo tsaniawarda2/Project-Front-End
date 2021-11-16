@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+nav {
+  font-family: "Rubik", sans-serif !important;
+  background-color: #f8fdff;
+}
+#nav-top .nav-link.active {
+  position: relative;
+}
+#nav-top .nav-link.active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #3473c5;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: "24px";
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 500;
+}
+#nav-top .nav-item {
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+#nav-top .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: #3473c5;
+  transition: width 0.3s ease-out;
+}
+#nav-top .nav-item:hover.nav-item::after {
+  width: 100%;
+}
+
+.right {
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.signin,
+.signup {
+  text-decoration: none;
+  color: #03010c !important;
+}
+
+.cart {
+  text-decoration: none;
+  background: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .right {
+    text-align: center;
+  }
+  .cart {
+    display: none;
+  }
+}
