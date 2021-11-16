@@ -1,5 +1,5 @@
 import { Redirect, useParams } from "react-router";
-import { useContext  } from "react";
+import { useContext } from "react";
 
 import "../assets/styles/detail.css";
 
@@ -61,12 +61,12 @@ const Detail = () => {
                   </button>
                 ) : (
                   <button
-                    className="btn btn-outline-dark"
+                    className="btn btn-success"
                     onClick={() => {
                       dispatch({
                         type: "ADD_TO_CART",
                         payload: product,
-                      })
+                      });
                     }}
                     disabled={!product.inStock}
                   >

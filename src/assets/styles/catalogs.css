@@ -59,7 +59,7 @@ section {
 
 /* JUMBOTRON */
 .parallax {
-  background-image: url("../image/banner.png");
+  background-image: url("../image/header.png");
   min-height: 525px;
   background-color: #f8931f;
   background-attachment: fixed;
@@ -74,6 +74,9 @@ section {
 }
 .card-title {
   margin: 15px 0px;
+}
+.card-body {
+  background-color: #f8fdff;
 }
 .img-list {
   height: 350px;
@@ -154,7 +157,7 @@ section {
     margin: 10px;
   }
   .img-list {
-    height: 70vh;
+    height: 50vh;
   }
   .card-title {
     font-size: 28px;
@@ -166,6 +169,9 @@ section {
   .cond-list {
     margin-top: 0px;
     font-size: 16px;
+  }
+  .sold {
+    top: 120px;
   }
 }
 

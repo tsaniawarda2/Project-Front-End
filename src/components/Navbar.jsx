@@ -42,8 +42,14 @@ export default function Navbar() {
                 </NavLink>
               </li>
             </ul>
-            <div className="right row">
-              
+            <div className="right-nav row">
+              <NavLink to="/login" className="login me-lg-2 col">
+                Login
+              </NavLink>
+
+              <NavLink to="/register" className="register me-lg-2 col">
+                Register
+              </NavLink>
 
               <div className="cart-nav dropdown col">
                 <button
@@ -112,7 +118,14 @@ export default function Navbar() {
               </NavLink>
               <div class="d-none" id="account-menu">
                 <div class="nav">
-                    <a href="#" id="confirmLogout" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a>
+                  <a
+                    href="#"
+                    id="confirmLogout"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Logout
+                  </a>
                 </div>
               </div>
             </div>
