@@ -60,7 +60,7 @@ const Detail = () => {
                   </button>
                 ) : (
                   <button
-                    className="btn btn-outline-dark"
+                    className="btn btn-success"
                     onClick={() => {
                       dispatch({
                         type: "ADD_TO_CART",
