@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { NavLink } from "react-router-dom";
-import "../assets/styles/register.css";
+import swal from "sweetalert";
+import "../assets/styles/signUp.css";
 import { BASEURL } from "../config/api";
 
 export default function SignUp() {
   const [form, setForm] = useState({
-    fullname: "",
-    email: "",
-    phone: "",
     username: "",
+    email: "",
     password: "",
   });
 
@@ -17,13 +16,7 @@ export default function SignUp() {
 
   const signUp = () => {
     const payload = form;
-    if (
-      form?.fullname &&
-      form?.email &&
-      form?.phone &&
-      form?.username &&
-      form?.password
-    ) {
+    if (form?.email && form?.username && form?.password) {
       fetch(`${BASEURL}/users`, {
         method: "POST",
         headers: {
@@ -44,6 +37,7 @@ export default function SignUp() {
         })
         .catch((error) => {
           console.log(error);
+          swal("Here's the title!", "...and here's the text!");
         });
     }
   };
@@ -51,16 +45,16 @@ export default function SignUp() {
     <>
       <h1>Sign Up</h1>
       <form className="formSignUp">
-        <div className="mb-3 SU-fullName">
+        <div className="mb-3 SU-userName">
           <label htmlFor="e-SU" className="form-label">
-            Full Name
+            Username
           </label>
           <input
             type="text"
             className="form-control"
-            id="fn-SU"
-            value={form?.fullname}
-            onChange={(e) => setForm({ ...form, fullname: e.target?.value })}
+            id="user-SU"
+            value={form?.username}
+            onChange={(e) => setForm({ ...form, username: e.target?.value })}
           />
         </div>
         <div className="mb-3 SU-email">
@@ -73,30 +67,6 @@ export default function SignUp() {
             id="e-SU"
             value={form?.email}
             onChange={(e) => setForm({ ...form, email: e.target?.value })}
-          />
-        </div>
-        <div className="mb-3 SU-phone">
-          <label htmlFor="pn-SU" className="form-label">
-            Phone Number
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="pn-SU"
-            value={form?.phone}
-            onChange={(e) => setForm({ ...form, phone: e.target?.value })}
-          />
-        </div>
-        <div className="mb-3 SU-userName">
-          <label htmlFor="e-SU" className="form-label">
-            Username
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="user-SU"
-            value={form?.username}
-            onChange={(e) => setForm({ ...form, username: e.target?.value })}
           />
         </div>
         <div className="mb-3 SU-password">

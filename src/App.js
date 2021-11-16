@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router";
+import { Redirect, Route, Switch } from "react-router";
 
 import {
   Home,
@@ -15,12 +15,46 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/signUp" component={SignUp} />
-        <Route exact path="/signIn" component={SignIn} />
-        <Route exact path="/catalogs" component={Catalogs} />
-        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route
+          exact
+          path="/signUp"
+          render={(props) => {
+            if (localStorage.getItem("dataSignIn")) {
+              return <Redirect to="/" />;
+            } else {
+              return <SignUp {...props} />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/signIn"
+          render={(props) => {
+            if (localStorage.getItem("dataSignIn")) {
+              return <Redirect to="/" />;
+            } else {
+              return <SignIn {...props} />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/catalogs"
+          render={(props) => <Catalogs {...props} />}
+        />
         <Route exact path="/checkout" component={Checkout} />
+        <Route
+          exact
+          path="/cart"
+          render={(props) => {
+            if (localStorage.getItem("dataSignIn")) {
+              return <Cart {...props} />;
+            } else {
+              return <Redirect to="/signIn" />;
+            }
+          }}
+        />
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="*" component={NotFound} />
       </Switch>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { NavLink } from "react-router-dom";
+import swal from "sweetalert";
 
 export default function SignIn() {
   const [form, setForm] = useState({
@@ -10,9 +11,30 @@ export default function SignIn() {
   const history = useHistory();
 
   const onSignIn = () => {
+    const payload = form;
     if (form?.username && form?.password) {
-      localStorage.setItem("dataSignIn", JSON.stringify(form));
-      history.goBack();
+      fetch(`${BASEURL}/users`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+        .then((response) => {
+          if (response.status === 201) {
+            return response.json();
+          } else {
+            return new Error("Failed to Sign Up");
+          }
+        })
+        .then((data) => {
+          localStorage.setItem("dataSignIn", JSON.stringify(data));
+          history.goBack();
+        })
+        .catch((error) => {
+          console.log(error);
+          swal("Here's the title!", "...and here's the text!");
+        });
     }
   };
 
