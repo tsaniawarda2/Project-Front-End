@@ -50,13 +50,6 @@ function App() {
         />
         <Route exact path="/cart" 
           render={(props) => <Cart{...props}/>}
-          // render={(props) => {
-          //   if (localStorage.getItem("dataSignIn")) {
-          //     return <Cart {...props} />;
-          //   } else {
-          //     return <Redirect to="/login" />;
-          //   }
-          // }}
           />
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="*" component={NotFound} />

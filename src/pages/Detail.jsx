@@ -67,24 +67,6 @@ const Detail = () => {
                         type: "ADD_TO_CART",
                         payload: product,
                       })
-                    //   localStorage.setItem("AddToCart", JSON.stringify(product))
-
-                    //   const carts = localStorage.getItem("AddToCart");
-                    //   if(carts){
-                    //     const arrCart = [JSON.parse(carts)]
-                    //     arrCart.push(cart)
-                    //     console.log(arrCart);
-                    //     localStorage.setItem("carts", JSON.stringify(cart))
-                    //   }
- 
-                    // if(localStorage.getItem("dataSignIn")){
-                    //   dispatch({
-                    //     type: "ADD_TO_CART",
-                    //     payload: product,
-                    //   })
-                    // } else {
-                    //   <NavLink to="/login"></NavLink>
-                    // }
                     }}
                     disabled={!product.inStock}
                   >

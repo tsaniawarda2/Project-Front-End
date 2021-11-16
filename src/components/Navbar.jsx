@@ -11,26 +11,6 @@ import "../assets/styles/navbar.css";
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
 
-  // const handleCart = () =>{
-  //   localStorage.setItem("carts", JSON.stringify(cart))
-  // }
-  //   const userCarts = JSON.parse(localStorage.getItem("carts"))
-  //   // const userCart = JSON.parse(userCarts)
-  //   console.log(userCarts, "usercart");
-
-  // const checkLogin = () => {
-  //   if(isLogin()) {
-
-  //       loginBtnEl.classList.add('d-none');
-  //       accountMenuEl.classList.remove('d-none');
-  //   }
-  // };
-
-  // const logout = () => {
-  //   localStorage.removeItem('login');
-  //   location.reload();
-  // };
-
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
