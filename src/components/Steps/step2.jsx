@@ -48,7 +48,7 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
   }
 
   return (
-    <Paper className="FormComponent-steps-4">
+    <Paper className="FormComponent-steps-4 payment-detail">
       <Box mt={2} mb={2}>
         {renderText({
           label: "Payment Detail",
