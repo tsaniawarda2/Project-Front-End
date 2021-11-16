@@ -1,20 +1,21 @@
 import React from "react";
-import Announcement from "../components/Announcement";
-import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
-import Products from "../components/Products";
-import Slider from "../components/Slider";
+import Slider from "../components/Home/Slider";
+import Categories from "../components/Home/Categories";
+import Product from "../components/Home/Product";
+import Newsletter from "../components/Home/Newsletter";
+import "../assets/styles/home.css";
 
 const Home = () => {
   return (
     <div>
-      <Announcement />
       <Navbar />
       <Slider />
+      <div className="ttl-cat">categories</div>
       <Categories />
-      <Products />
+      <div className="our-prod">Our Products</div>
+      <Product />
       <Newsletter />
       <Footer />
     </div>

@@ -8,19 +8,12 @@ import { DataContext } from "../context/DataProduct";
 
 import "../assets/styles/navbar.css";
 
-import { Badge } from "@material-ui/core";
-import { ShoppingCartOutlined } from "@material-ui/icons";
-import { NavLink } from "react-router-dom";
-
-import "../assets/css/navbar.css";
-
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
-  // console.log(cart.cart, "from navbar");
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
         <div className="container">
           <NavLink exact className="navbar-brand fw-bold fs-4 logo" to="/">
             <h1>BuyMePlease</h1>
@@ -44,25 +37,19 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="./catalogs">
+                <NavLink className="nav-link" to="/catalogs">
                   Catalogs
                 </NavLink>
               </li>
             </ul>
-            <div className="right row">
-              <NavLink to="./login" className="login me-3 col">
+            <div className="right-nav row">
+              <NavLink to="/login" className="login me-lg-2 col">
                 Login
               </NavLink>
 
-              <NavLink to="./register" className="register me-3 col">
+              <NavLink to="/register" className="register me-lg-2 col">
                 Register
               </NavLink>
-
-              {/* <NavLink to="./cart" className="cart col">
-                <Badge badgeContent={4} color="primary">
-                  <ShoppingCartOutlined />
-                </Badge>
-              </NavLink> */}
 
               <div className="cart-nav dropdown col">
                 <button

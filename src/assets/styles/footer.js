@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { mobile } from "./responsive";
+import { mobile, tablet } from "./responsive";
 
 export const Container = styled.div`
+  background-color: #3473c5;
   display: flex;
+  color: white;
   ${mobile({ flexDirection: "column" })}
 `;
 
@@ -10,7 +12,9 @@ export const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  margin: 30px 0px 30px 85px;
+  ${mobile({ margin: "35px" })}
+  ${tablet({ marginLeft: "40px" })};
 `;
 
 export const Logo = styled.h1``;
@@ -37,31 +41,34 @@ export const SocialIcon = styled.div`
 
 export const Center = styled.div`
   flex: 1;
-  padding: 20px;
+  text-align: center;
+  margin: 30px 85px;
   ${mobile({ display: "none" })}
+  ${tablet({ margin: "30px 15px" })}
 `;
 
 export const Title = styled.h3`
   margin-bottom: 30px;
+  ${tablet({ textAlign: "center" })};
 `;
 
-export const List = styled.ul`
+export const List = styled.p`
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
 `;
 
-export const ListItem = styled.li`
+export const ListItem = styled.p`
   width: 50%;
   margin-bottom: 10px;
 `;
 
 export const Right = styled.div`
   flex: 1;
-  padding: 20px;
-  ${mobile({ backgroundColor: "#fff8f8" })}
+  margin: 30px 85px 30px 0px;
+  ${mobile({ display: "none" })}
+  ${tablet({ marginRight: "40px" })};
 `;
 
 export const ContactItem = styled.div`

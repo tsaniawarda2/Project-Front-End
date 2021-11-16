@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile } from "./responsive";
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -16,62 +16,43 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
   background-color: white;
   ${mobile({ width: "75%" })}
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 24px;
   font-weight: 300;
 `;
 
-const Form = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   flex: 1;
   min-width: 40%;
   margin: 10px 0;
   padding: 10px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: #FFAE01;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   margin: 5px 0px;
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
 `;
-
-const Login = () => {
-  return (
-    <Container>
-      <Wrapper>
-        <Title>SIGN IN</Title>
-        <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
-          <Button>Login</Button>
-          <Link>Don't Have an Account? </Link>
-          <Link>Create Here</Link>
-        </Form>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Login;
