@@ -98,6 +98,7 @@ export default function Navbar() {
                         <button
                           className="btn btn-dark"
                           style={{ width: "95%", margin: "0 10px" }}
+                          // onClick={handleCart()}
                         >
                           Go To Cart
                         </button>
@@ -106,6 +107,25 @@ export default function Navbar() {
                   ) : (
                     <span style={{ padding: 10 }}>Cart is Empty!</span>
                   )}
+                </div>
+              </div>
+              <NavLink to="/login" className="signin me-3 col">
+                Sign In
+              </NavLink>
+
+              <NavLink to="/register" className="signup me-3 col">
+                Sign Up
+              </NavLink>
+              <div class="d-none" id="account-menu">
+                <div class="nav">
+                  <a
+                    href="#"
+                    id="confirmLogout"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Logout
+                  </a>
                 </div>
               </div>
             </div>

@@ -59,7 +59,7 @@ section {
 
 /* JUMBOTRON */
 .parallax {
-  background-image: url("../image/banner.png");
+  background-image: url("../image/header.png");
   min-height: 525px;
   background-color: #f8931f;
   background-attachment: fixed;

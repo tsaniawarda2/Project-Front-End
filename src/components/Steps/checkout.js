@@ -8,7 +8,7 @@ export const renderText = ({ type, label, color, ...rest }) => (
 
 export const renderInputField = ({ name, label, type, state, onChange }) => {
   const { data, errors } = state;
-  console.log(data[name], "from render");
+  // console.log(data[name], "from render");
   return (
     <TextField
       label={label}
@@ -26,7 +26,7 @@ export const renderInputField = ({ name, label, type, state, onChange }) => {
 };
 export const renderSelect = ({ name, label, options, state, onChange }) => {
   const { data, errors } = state;
-  console.log(name);
+  // console.log(name);
   return (
     <TextField
       select
@@ -50,12 +50,12 @@ export const renderSelect = ({ name, label, options, state, onChange }) => {
 };
 
 export const renderButton = ({ label, variant, color, fullWidth, onClick, isDisabled }) => {
-  console.log(isDisabled);
+  // console.log(isDisabled);
   return (
     <Button
     disabled={isDisabled}
     variant={variant ? variant : "outlined"}
-    // color={color ? color : "primary"}
+    color={color ? color : "#FFAE01"}
     fullWidth={fullWidth ? fullWidth : false}
     onClick={onClick}>
     {label}

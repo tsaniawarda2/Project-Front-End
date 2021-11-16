@@ -34,7 +34,6 @@ export default function SignUp() {
         .then((data) => {
           localStorage.setItem("dataSignIn", JSON.stringify(data));
           history.goBack();
-          console.log(data, "=====data");
         })
         .catch((error) => {
           console.log(error);

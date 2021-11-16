@@ -2,12 +2,12 @@ import { Redirect, Route, Switch } from "react-router";
 
 import {
   Home,
-  SignIn,
-  SignUp,
   Catalogs,
   Detail,
   Cart,
   Checkout,
+  Login,
+  Register,
 } from "./pages";
 import NotFound from "./pages/errors/NotFound";
 
@@ -18,23 +18,23 @@ function App() {
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route
           exact
-          path="/signUp"
+          path="/login"
           render={(props) => {
             if (localStorage.getItem("dataSignIn")) {
               return <Redirect to="/" />;
             } else {
-              return <SignUp {...props} />;
+              return <Login {...props} />;
             }
           }}
         />
         <Route
           exact
-          path="/signIn"
+          path="/register"
           render={(props) => {
             if (localStorage.getItem("dataSignIn")) {
               return <Redirect to="/" />;
             } else {
-              return <SignIn {...props} />;
+              return <Register {...props} />;
             }
           }}
         />
@@ -43,18 +43,19 @@ function App() {
           path="/catalogs"
           render={(props) => <Catalogs {...props} />}
         />
-        <Route exact path="/checkout" component={Checkout} />
         <Route
           exact
-          path="/cart"
+          path="/checkout"
+          // render={(props) => <Checkout {...props}/>}
           render={(props) => {
             if (localStorage.getItem("dataSignIn")) {
-              return <Cart {...props} />;
+              return <Checkout {...props} />;
             } else {
-              return <Redirect to="/signIn" />;
+              return <Redirect to="/login" />;
             }
           }}
         />
+        <Route exact path="/cart" render={(props) => <Cart {...props} />} />
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="*" component={NotFound} />
       </Switch>
