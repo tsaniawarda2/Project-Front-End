@@ -30,8 +30,8 @@ export default function Footer() {
       <Left>
         <Logo>BuyMePlease</Logo>
         <Desc>
-          Kami berfokus untuk menyediakan barang - barang bekas dengan kualitas
-          terbaik namun dengan harga yang serendah mungkin.
+          We are the first ecommerce start-up that's focusing on providing customers with second hand goods with the highest quality and lowest price possible. 
+          For more information, please visit us on these links. Happy shopping!
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -49,7 +49,7 @@ export default function Footer() {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Useful Links</Title>
+        <Title >Useful Links</Title>
         <List>
           <ListItem>Home</ListItem>
           <ListItem>Catalogs</ListItem>
@@ -64,7 +64,7 @@ export default function Footer() {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> Jl. Benyamin Suaeb,
+          <Room style={{ marginRight: "10px" }} />Benyamin Sueb St.
           RT.13/RW.10, Pademangan Tim., Jakarta Utara, Kota Jkt Utara, Daerah
           Khusus Ibukota Jakarta 14410
         </ContactItem>
@@ -72,7 +72,7 @@ export default function Footer() {
           <Phone style={{ marginRight: "10px" }} /> +62 811-1213-5792
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> BMP@gmail.com
+          <MailOutline style={{ marginRight: "10px" }} /> BuyMePlease@gmail.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

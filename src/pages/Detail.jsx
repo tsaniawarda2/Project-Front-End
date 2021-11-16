@@ -24,16 +24,18 @@ const Detail = () => {
       <Navbar />
       <div className="container">
         <div className=" row wrapper">
-          <div className="col-lg-6 col-md-12">
-            <div className="image-container text-center">
-              <img src={product?.image} alt={product?.name} id="detail-img" />
+          <div className="col-lg-4 col-md-12">
+            <div className="pict">
+              <div className="image-container text-center">
+                <img src={product?.image} alt={product?.name} id="detail-img" />
+              </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12">
+          <div className="col-lg-8 col-md-12">
             <div className="info">
               <h1>{product?.name}</h1>
               <p>{product?.description}</p>
-              <span className="price">IDR {product?.price}</span>
+              <span className="detail-price">IDR {product?.price}</span>
               <div className="condition">
                 <span className="decs-cond">
                   <i

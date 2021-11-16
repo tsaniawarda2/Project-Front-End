@@ -41,9 +41,10 @@ export const Title = styled.h1`
 
 export const Button = styled.button`
   border: none;
-  padding: 10px;
-  background-color: white;
-  color: gray;
+  padding: 12px;
+  background-color: #FFAE01;
+  border-radius: 10px;
+  color: #03010C;
   cursor: pointer;
   font-weight: 600;
 `;

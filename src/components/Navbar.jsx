@@ -43,12 +43,12 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="right row">
-              <NavLink to="/login" className="login me-3 col">
-                Login
+              <NavLink to="/signIn" className="signin me-3 col">
+                Sign In
               </NavLink>
 
-              <NavLink to="/register" className="register me-3 col">
-                Register
+              <NavLink to="/signUp" className="signup me-3 col">
+                Sign Up
               </NavLink>
 
               <div className="cart-nav dropdown col">

@@ -34,7 +34,7 @@ const Categories = () => {
           <Info>
             <Title>{item.category}</Title>
             <NavLink to={`/catalogs/`}>
-              <Button>Belanja Sekarang</Button>
+              <Button>Shop Now</Button>
             </NavLink>
           </Info>
         </Section>
