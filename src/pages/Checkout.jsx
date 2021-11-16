@@ -91,8 +91,6 @@ function Checkout() {
             handleSubmit={handleSubmit}
           />
         );
-      case 3:
-        return <FinalStep data={state.data} />;
       default:
         return (
           <Step1
