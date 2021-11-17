@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import { SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
+import { SearchOutlined } from "@material-ui/icons";
 
 import {
   Circle,
@@ -15,7 +15,8 @@ import {
 import { DataContext } from "../../context/DataProduct";
 
 const Container = styled.div`
-  padding: 20px;
+  padding: 0px 70px;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -30,12 +31,9 @@ const Products = () => {
           <Circle />
           <Image src={item?.image} />
           <Info>
-            <Icon>
-              <ShoppingCartOutlined />
-            </Icon>
             <NavLink to={`/detail/${item?.id}`}>
               <Icon>
-                <SearchOutlined />
+                <SearchOutlined style={{ color: "#3473c5" }} />
               </Icon>
             </NavLink>
           </Info>

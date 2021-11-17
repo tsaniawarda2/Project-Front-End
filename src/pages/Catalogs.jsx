@@ -11,8 +11,6 @@ import Filter from "../components/Filter";
 import "../assets/styles/catalogs.css";
 import "../assets/styles/filter.css";
 
-import Image from "../assets/image/banner.png";
-
 const categories = ["All", "Fashion", "Furniture", "Electronics", "Accesories"];
 const condition = ["Excellent", "Very good", "Good", "Moderate"];
 

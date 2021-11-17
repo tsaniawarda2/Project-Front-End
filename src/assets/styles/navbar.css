@@ -46,21 +46,75 @@ nav {
   width: 100%;
 }
 
-.right {
+.right-nav {
   font-size: 14px;
   cursor: pointer;
-  margin-left: 25px;
+  font-family: "Rubik", sans-serif;
 }
 
-.signin,
-.signup {
+.login {
+  color: #3473c5 !important;
   text-decoration: none;
-  color: #03010c !important;
+  padding: 7px 12px 0px;
+  font-weight: 500;
+  border: 1px solid #3473c5;
+  border-radius: 5px;
+}
+.login:hover,
+.login::after,
+.login:active {
+  background-color: #3473c5;
+  color: white !important;
 }
 
 .cart {
   text-decoration: none;
   background: none;
+}
+
+.btn-nav-login {
+  margin-top: 0 !important;
+  background-color: #f8fdff;
+  border: 2px solid #3473c5;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+
+.cartitem {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  padding: 0 10px;
+}
+
+.cartItemDetail {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.btn-nav-login:hover {
+  color: #f8fdff;
+  background-color: #3473c5;
+}
+
+.delete-icons {
+  color: #ffae01;
+}
+
+.btn-gotocart {
+  font-family: "Rubik", sans-serif;
+  background-color: #ffae01;
+  border-color: #ffae01;
+  color: white;
+}
+
+.btn-gotocart:hover {
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: white;
 }
 
 @media only screen and (max-width: 768px) {

@@ -1,25 +1,30 @@
 import styled from "styled-components";
-import { mobile } from "./responsive";
+import { mobile, tablet } from "./responsive";
 
 export const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  ${mobile({ padding: "0px", flexDirection: "column" })}
+  ${mobile({ paddingTop: "10px", flexDirection: "column" })};
+  ${tablet({ paddingTop: "15px", flexDirection: "column" })};
 `;
 
 export const Section = styled.div`
   flex: 1;
-  margin: 3px;
-  height: 70vh;
+  margin: 0px 15px;
+  height: 65vh;
   position: relative;
+  ${mobile({ paddingBottom: "45px" })};
+  ${tablet({ padding: " 10px 60px" })};
 `;
 
 export const Image = styled.img`
+  box-shadow: 5px 5px 18px #cfcfcf;
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
-  ${mobile({ height: "20vh" })}
+  border-radius: 20px;
+  ${mobile({ height: "45vh" })}
 `;
 
 export const Info = styled.div`
@@ -32,19 +37,4 @@ export const Info = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-export const Title = styled.h1`
-  color: white;
-  margin-bottom: 20px;
-`;
-
-export const Button = styled.button`
-  border: none;
-  padding: 12px;
-  background-color: #FFAE01;
-  border-radius: 10px;
-  color: #03010C;
-  cursor: pointer;
-  font-weight: 600;
 `;

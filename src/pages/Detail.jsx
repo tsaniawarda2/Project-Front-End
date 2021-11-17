@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { Redirect, useParams } from "react-router";
 import { useContext } from "react";
 
 import "../assets/styles/detail.css";
@@ -6,6 +6,7 @@ import "../assets/styles/detail.css";
 import { DataContext } from "../context/DataProduct";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { NavLink } from "react-router-dom";
 
 const Detail = () => {
   const {
@@ -60,7 +61,7 @@ const Detail = () => {
                   </button>
                 ) : (
                   <button
-                    className="btn btn-outline-dark"
+                    className="btn btn-success"
                     onClick={() => {
                       dispatch({
                         type: "ADD_TO_CART",
