@@ -107,4 +107,4 @@ function Registrater() {
   );
 }
 
-export default Registrater;
+export default Register;
