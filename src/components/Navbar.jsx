@@ -10,16 +10,15 @@ import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
-  const login = JSON.parse(localStorage.getItem("dataLogin"))
+  const login = JSON.parse(localStorage.getItem("dataLogin"));
 
-  const [statusLogin, setStatusLogin] = useState(false)
-  
-  useEffect(()=>{
+  const [statusLogin, setStatusLogin] = useState(false);
 
-    if(login !== null){
-      setStatusLogin(true)
+  useEffect(() => {
+    if (login !== null) {
+      setStatusLogin(true);
     }
-  })
+  });
   console.log(login);
 
   return (
@@ -54,6 +53,7 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="right-nav row">
+              {/* CART */}
               <div className="cart-nav dropdown col">
                 <button
                   class="btn cart-icon"
@@ -85,7 +85,8 @@ export default function Navbar() {
                             <span>{product.name}</span>
                             <span>IDR {product.price}</span>
                           </div>
-                          <Delete className="delete-icons"
+                          <Delete
+                            className="delete-icons"
                             fontSize="20px"
                             style={{ cursor: "pointer" }}
                             onClick={() =>
@@ -114,14 +115,10 @@ export default function Navbar() {
               </div>
               <NavLink to="/login" className="login me-lg-2 col">
                 {statusLogin ? (
-                  <button className="btn-nav-login">
-                    {login?.username}
-                  </button>
+                  <button className="btn-nav-login">{login?.username}</button>
                 ) : (
-                  <button className="btn-nav-login">
-                    Login
-                  </button>
-                )} 
+                  <button className="btn-nav-login">Login</button>
+                )}
               </NavLink>
             </div>
           </div>

@@ -4,14 +4,10 @@ nav {
   font-family: "Rubik", sans-serif !important;
   background-color: #f8fdff;
 }
-#nav-top .nav-link.active,
-.login,
-.register {
+#nav-top .nav-link.active {
   position: relative;
 }
-#nav-top .nav-link.active::after,
-.login::after,
-.register::after {
+#nav-top .nav-link.active::after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -31,16 +27,12 @@ nav {
   align-items: center;
   font-weight: 500;
 }
-#nav-top .nav-item,
-.login,
-.register {
+#nav-top .nav-item {
   margin-right: 20px;
   margin-left: 20px;
   position: relative;
 }
-#nav-top .nav-item::after,
-.login::after,
-.register::after {
+#nav-top .nav-item::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -50,9 +42,7 @@ nav {
   background-color: #3473c5;
   transition: width 0.3s ease-out;
 }
-#nav-top .nav-item:hover.nav-item::after,
-.login:hover.login::after,
-.register:hover.register::after {
+#nav-top .nav-item:hover.nav-item::after {
   width: 100%;
 }
 
@@ -62,12 +52,19 @@ nav {
   font-family: "Rubik", sans-serif;
 }
 
-.login,
-.register {
-  color: #03010c !important;
+.login {
+  color: #3473c5 !important;
   text-decoration: none;
-  margin-top: 9px;
+  padding: 7px 12px 0px;
   font-weight: 500;
+  border: 1px solid #3473c5;
+  border-radius: 5px;
+}
+.login:hover,
+.login::after,
+.login:active {
+  background-color: #3473c5;
+  color: white !important;
 }
 
 .cart {
