@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { Badge } from "@material-ui/core";
 import { ShoppingCartOutlined, Delete } from "@material-ui/icons";
@@ -10,6 +10,17 @@ import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
+  const login = JSON.parse(localStorage.getItem("dataLogin"))
+
+  const [statusLogin, setStatusLogin] = useState(false)
+  
+  useEffect(()=>{
+
+    if(login !== null){
+      setStatusLogin(true)
+    }
+  })
+  console.log(login);
 
   return (
     <>
@@ -42,9 +53,7 @@ export default function Navbar() {
                 </NavLink>
               </li>
             </ul>
-            <div className="right row">
-              
-
+            <div className="right-nav row">
               <div className="cart-nav dropdown col">
                 <button
                   class="btn cart-icon"
@@ -76,7 +85,7 @@ export default function Navbar() {
                             <span>{product.name}</span>
                             <span>IDR {product.price}</span>
                           </div>
-                          <Delete
+                          <Delete className="delete-icons"
                             fontSize="20px"
                             style={{ cursor: "pointer" }}
                             onClick={() =>
@@ -88,11 +97,11 @@ export default function Navbar() {
                           />
                         </span>
                       ))}
+
                       <NavLink to="/cart">
                         <button
-                          className="btn btn-dark"
+                          className="btn btn-gotocart"
                           style={{ width: "95%", margin: "0 10px" }}
-                          // onClick={handleCart()}
                         >
                           Go To Cart
                         </button>
@@ -103,18 +112,17 @@ export default function Navbar() {
                   )}
                 </div>
               </div>
-              <NavLink to="/login" className="signin me-3 col">
-                Sign In
+              <NavLink to="/login" className="login me-lg-2 col">
+                {statusLogin ? (
+                  <button className="btn-nav-login">
+                    {login?.username}
+                  </button>
+                ) : (
+                  <button className="btn-nav-login">
+                    Login
+                  </button>
+                )} 
               </NavLink>
-
-              <NavLink to="/register" className="signup me-3 col">
-                Sign Up
-              </NavLink>
-              <div class="d-none" id="account-menu">
-                <div class="nav">
-                    <a href="#" id="confirmLogout" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

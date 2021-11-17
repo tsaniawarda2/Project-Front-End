@@ -3,37 +3,49 @@ import { useHistory } from 'react-router';
 import "../assets/styles/login.css"
 
 function Login() {
-	const [emaillog, setEmaillog] = useState(" ");
+	const [usernamelog, setUsernamelog] = useState(" ");
 	const [passwordlog, setPasswordlog] = useState(" ");
 
 	const history = useHistory()
+	console.log(passwordlog, "passlog")
+	console.log(usernamelog, "usernamelog");
 
+	console.log(history, "history");
+
+	
 	function handleLogin(e) {
 		e.preventDefault();
-		let pass = localStorage.getItem("Password").replace(/"/g, "");
-		let mail = localStorage.getItem("Email").replace(/"/g, "");
+		let password = localStorage.getItem("Password")
+		let username = localStorage.getItem("Username")
 		// .replace(/"/g,"") is used to remove the double quotes for the string
 		console.log(passwordlog, "passlog")
-		console.log(emaillog, "emaillog");
-		console.log(pass, "pass");
-		console.log(mail, "mail");
+		console.log(usernamelog, "usernamelog");
+		console.log(password, "passwod");
+		console.log(username, "username");
 
-		if (!emaillog || !passwordlog) {
+		if(password == null || username == null){
+			console.log("belum register");
+		} else {
+		password = password.replace(/"/g, "");
+		username = username.replace(/"/g, "");
+		if (!usernamelog || !passwordlog) {
 				console.log("EMPTY");
-
-		} else if ((passwordlog !== pass) || (emaillog !== mail)) {
+		} else if ((passwordlog !== password) || (usernamelog !== username)) {
 				console.log("salah");
 		} else {
-				console.log("berhasil");
+			const login = {
+				password: passwordlog,
+				username: usernamelog,
+			}
+	
+			// console.log(login);
+	
+			localStorage.setItem("dataLogin", JSON.stringify(login));
+			console.log("berhasil");
+			
+			history.goBack()
 		}
-
-		const login = {
-			password: passwordlog,
-			email: emaillog,
 		}
-
-		localStorage.setItem("login", JSON.stringify(login));
-		history.goBack()
 	}
 
 	return (
@@ -44,13 +56,13 @@ function Login() {
 					<form onSubmit={handleLogin}>
 						<h3>Login</h3>
 						<div className="form-group">
-							<label>Email</label>
-							<input type="email" className="form-control" placeholder="Enter email" onChange={(event) => setEmaillog(event.target.value)} />
+							<label>Username</label>
+							<input type="text" className="form-control" placeholder="Enter your username" onChange={(event) => setUsernamelog(event.target.value)} />
 						</div>
 
 						<div className="form-group">
 							<label>Password</label>
-							<input type="password" className="form-control" placeholder="Enter password" onChange={(event) => setPasswordlog(event.target.value)} />
+							<input type="password" className="form-control" placeholder="Enter your password" onChange={(event) => setPasswordlog(event.target.value)} />
 						</div>
 
 						<button type="submit" className="btn-login">Login</button>

@@ -1,28 +1,26 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
-  Button,
   Container,
   Image,
   Info,
   Section,
-  Title,
 } from "../../assets/styles/categoryItem";
 import { BASEURL } from "../../config/api";
+import "../../assets/styles/home.css";
 
 const Categories = () => {
   const [category, setCategory] = useState([]);
 
-  const getCategories = async () => {
-    try {
-      const response = await fetch(`${BASEURL}/categories`);
-      setCategory(await response.clone().json());
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const response = await fetch(`${BASEURL}/categories`);
+        setCategory(await response.json());
+      } catch (e) {
+        console.log(e);
+      }
+    };
     getCategories();
   }, []);
 
@@ -32,9 +30,11 @@ const Categories = () => {
         <Section key={idx}>
           <Image src={item.pict} />
           <Info>
-            <Title>{item.category}</Title>
-            <NavLink to={`/catalogs/`}>
-              <Button>Shop Now</Button>
+            <div className="cat-title">
+              <h1>{item.category}</h1>
+            </div>
+            <NavLink to="/catalogs">
+              <button className="cat-btn">Shop Now</button>
             </NavLink>
           </Info>
         </Section>

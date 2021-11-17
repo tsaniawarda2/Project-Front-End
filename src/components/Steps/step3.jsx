@@ -11,12 +11,10 @@ import "../../assets/styles/checkout"
 
 const Step3 = ({ data, handlePrev }) => {
   // console.log(data, "data from 3");
-
   const cart = localStorage.getItem("cart")
   // console.log(cart, "< 3");
   const arrCart = JSON.parse(cart)
   // console.log(arrCart.cart, "arrcart");
-
   const total = localStorage.getItem("total")
 
   const handlePay = async () =>{
@@ -130,24 +128,25 @@ const Step3 = ({ data, handlePrev }) => {
           <h5 className="title-detail">Detail Items</h5>
           <div className="flex-row">
             {arrCart.cart.map((product) => (
-              <div className="row detail-item">
-                <div className="col-md-6">
+              <div className="detail-item">
+                <div className="col-md-6 col-sm-6">
                   <h6>{product.name}</h6>
                 </div>
-                <div className="col-md-6 price">
-                  <h6 className="item-price">IDR {product.price}</h6>
+                <div className="col-md-6 col-sm-6 price">
+                  <h6 className="item-price"> IDR {product.price}</h6>
                 </div>
               </div>
               ))
               }
           </div>
+          
           <hr></hr>
-          <div className="row">
-            <div className="col-md-6">
+          <div className="row-price">
+            <div className="col-md-6 col-sm-6 total-price-title">
               <h5>Total : </h5>
             </div>
-            <div className="col-md-6 total-price">
-              <h5>IDR {total}</h5>
+            <div className="col-md-6 col-col-sm-6 total-price-stepper">
+              <h5> IDR {total}</h5>
             </div>
           </div>
         </div>
