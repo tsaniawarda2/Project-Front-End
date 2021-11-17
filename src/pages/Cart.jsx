@@ -21,6 +21,12 @@ const Cart = () => {
     setTotal(cart.cart.reduce((acc, curr) => acc + Number(curr.price), 0));
   }, [cart]);
 
+  const login = localStorage.getItem("dataLogin")
+  let statusLogin = false
+  if(login !== null){
+     statusLogin = true
+  }
+
   return (
     <>
       <Navbar />
@@ -43,7 +49,7 @@ const Cart = () => {
                     </div>
                     <div className="col-lg-7 col-md-7 col-sm-12 mt-4 column-2">
                       <h4>{product.name}</h4>
-                      <h5 className="price">IDR {product.price}</h5>
+                      <h5 className="price-cart">IDR {product.price}</h5>
                       <h6>{product.description}</h6>
                       <h6 className="condition">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>{" "}
@@ -91,14 +97,26 @@ const Cart = () => {
               Total:
               <span>IDR {total}</span>
             </span>
-            <a
+            {statusLogin?(
+              <a
               className="btn btn-checkout"
               href="/checkout"
               role="button"
-              disabled={cart.cart.length === 0}
             >
               Checkout
             </a>
+            ):(
+            <>
+              <a
+              className="btn btn-checkout-disabled"
+              href="/checkout"
+              role="button"
+            >
+              Checkout
+            </a>
+            <p>You must login before checkout your items. <NavLink to="/login">Login here</NavLink></p>
+            </>
+            )}
           </div>
         </div>
         <Footer />

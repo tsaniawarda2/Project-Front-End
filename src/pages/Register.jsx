@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import "../assets/styles/login.css";
 import { BASEURL } from "../config/api";
 
-function Registrater() {
+function Register() {
   const [username, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,14 +44,14 @@ function Registrater() {
           }
         })
         .then((data) => {
-          localStorage.setItem("dataSignIn", JSON.stringify(data));
-          history.goBack();
+          localStorage.setItem("dataRegister", JSON.stringify(data));
         })
         .catch((error) => {
           console.log(error);
           swal("Sorry, internal server error...");
         });
     }
+    history.push("/login");
   }
 
   return (
@@ -106,4 +106,4 @@ function Registrater() {
   );
 }
 
-export default Registrater;
+export default Register;

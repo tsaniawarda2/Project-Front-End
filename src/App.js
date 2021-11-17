@@ -20,7 +20,7 @@ function App() {
           exact
           path="/login"
           render={(props) => {
-            if (localStorage.getItem("dataSignIn")) {
+            if (localStorage.getItem("dataLogin")) {
               return <Redirect to="/" />;
             } else {
               return <Login {...props} />;
@@ -31,7 +31,7 @@ function App() {
           exact
           path="/register"
           render={(props) => {
-            if (localStorage.getItem("dataSignIn")) {
+            if (localStorage.getItem("dataRegister")) {
               return <Redirect to="/" />;
             } else {
               return <Register {...props} />;
@@ -46,9 +46,8 @@ function App() {
         <Route
           exact
           path="/checkout"
-          // render={(props) => <Checkout {...props}/>}
           render={(props) => {
-            if (localStorage.getItem("dataSignIn")) {
+            if (localStorage.getItem("dataLogin")) {
               return <Checkout {...props} />;
             } else {
               return <Redirect to="/login" />;

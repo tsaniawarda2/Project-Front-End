@@ -34,6 +34,17 @@
 
 .column-2 {
   text-align: left;
+  padding: 0 45px;
+  padding-left: 90px;
+}
+
+.column-2 h6{
+  font-size: 14px;
+}
+
+.column-2 .price-cart{
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 .cartItem {
@@ -87,7 +98,7 @@
 .price {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
@@ -134,6 +145,18 @@
   color: #ffae01;
 }
 
+.btn-checkout-disabled{
+  background-color: grey;
+  color: #f8fdff;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  pointer-events: none;
+  cursor: default;
+}
+
 .product-detail,
 .total-price,
 .title {
@@ -146,6 +169,7 @@
 .total-price {
   font-weight: 600;
   font-size: 18px;
+  padding: 0;
 }
 
 .product-detail > h5 {
@@ -241,10 +265,17 @@
     font-size: 12px;
   }
 
+  .column-2{
+    padding: 0 20px;
+  }
+
   .column-2 > h6 {
     font-size: 12px;
   }
 
+  .column-2 .condition{
+    margin-bottom: 10px;
+  }
   .summary {
     width: 90%;
     align-self: center;
@@ -262,6 +293,7 @@
 
   .total-price {
     font-size: 16px;
+    padding: 0px;
   }
 
   .btn-checkout {

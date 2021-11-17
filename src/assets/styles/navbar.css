@@ -72,6 +72,51 @@ nav {
   background: none;
 }
 
+.btn-nav-login{
+  margin-top: 0!important;
+  background-color: #f8fdff;
+  border: 2px solid #3473c5;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+
+.cartitem{
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  padding: 0 10px;
+}
+
+.cartItemDetail{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.btn-nav-login:hover{
+  color: #f8fdff;
+  background-color: #3473c5;
+}
+
+.delete-icons{
+  color: #FFAE01;
+}
+
+.btn-gotocart{
+  font-family: "Rubik", sans-serif;
+  background-color: #FFAE01;
+  border-color: #FFAE01;
+  color: white;
+}
+
+.btn-gotocart:hover{
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: white;
+}
+
 @media only screen and (max-width: 768px) {
   .right {
     text-align: center;

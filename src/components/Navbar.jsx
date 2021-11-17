@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { Badge } from "@material-ui/core";
 import { ShoppingCartOutlined, Delete } from "@material-ui/icons";
@@ -10,6 +10,16 @@ import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
+  const login = JSON.parse(localStorage.getItem("dataLogin"));
+
+  const [statusLogin, setStatusLogin] = useState(false);
+
+  useEffect(() => {
+    if (login !== null) {
+      setStatusLogin(true);
+    }
+  });
+  console.log(login);
 
   return (
     <>
@@ -76,6 +86,7 @@ export default function Navbar() {
                             <span>IDR {product.price}</span>
                           </div>
                           <Delete
+                            className="delete-icons"
                             fontSize="20px"
                             style={{ cursor: "pointer" }}
                             onClick={() =>
@@ -87,11 +98,11 @@ export default function Navbar() {
                           />
                         </span>
                       ))}
+
                       <NavLink to="/cart">
                         <button
-                          className="btn btn-dark"
+                          className="btn btn-gotocart"
                           style={{ width: "95%", margin: "0 10px" }}
-                          // onClick={handleCart()}
                         >
                           Go To Cart
                         </button>
@@ -102,23 +113,13 @@ export default function Navbar() {
                   )}
                 </div>
               </div>
-              {/* LOGIN */}
-              <NavLink to="/login" className="login ms-lg-2 col">
-                Login
+              <NavLink to="/login" className="login me-lg-2 col">
+                {statusLogin ? (
+                  <button className="btn-nav-login">{login?.username}</button>
+                ) : (
+                  <button className="btn-nav-login">Login</button>
+                )}
               </NavLink>
-
-              <div class="d-none" id="account-menu">
-                <div class="nav">
-                  <a
-                    href="#"
-                    id="confirmLogout"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    Logout
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
