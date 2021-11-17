@@ -16,6 +16,7 @@ export default function Navbar() {
 
   const [statusLogin, setStatusLogin] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (login !== null) {
       setStatusLogin(true);

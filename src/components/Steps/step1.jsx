@@ -1,11 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, Paper } from "@material-ui/core";
-import "../../assets/styles/checkout.css"
-import {
-  renderButton,
-  renderInputField,
-  renderText,
-} from "./checkout";
+import "../../assets/styles/checkout.css";
+import { renderButton, renderInputField, renderText } from "./checkout";
 
 const Step1 = ({ state, handleChange, handleNext }) => {
   // console.log(state, "from step1");
@@ -14,40 +10,41 @@ const Step1 = ({ state, handleChange, handleNext }) => {
     lastName: state?.data?.lastName || "",
     address: state?.data?.address || "",
     phone: state?.data?.phone || "",
-  })
+  });
 
-  const [isDisabled, setIsDisabled] = useState(true)
+  const [isDisabled, setIsDisabled] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
     setData({
       firstName: state?.data?.firstName,
       lastName: state?.data?.lastName,
       address: state?.data?.address,
       phone: state?.data?.phone,
-    })
-    validatedInput()
-  },[state])
+    });
+    validatedInput();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
 
   // console.log(data, "<< data")
 
-  function validatedInput(){
+  function validatedInput() {
     let isValid = true;
-    if(!data?.firstName){
-      isValid = false
+    if (!data?.firstName) {
+      isValid = false;
     }
-    if(!data?.lastName){
-      isValid = false
+    if (!data?.lastName) {
+      isValid = false;
     }
-    if(!data?.address){
-      isValid = false
+    if (!data?.address) {
+      isValid = false;
     }
-    if(!data?.phone){
-      isValid = false
+    if (!data?.phone) {
+      isValid = false;
     }
-    if(isValid){
-      setIsDisabled(false)
-    } else{
-      setIsDisabled(true)
+    if (isValid) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
     }
   }
 
@@ -103,8 +100,8 @@ const Step1 = ({ state, handleChange, handleNext }) => {
         </Grid>
       </Grid>
 
-      <Grid container component={Box} justify='flex-end' mt={2} p={2}>
-        {renderButton({ label: "Next", onClick: handleNext, isDisabled})}
+      <Grid container component={Box} justify="flex-end" mt={2} p={2}>
+        {renderButton({ label: "Next", onClick: handleNext, isDisabled })}
       </Grid>
     </Paper>
   );
