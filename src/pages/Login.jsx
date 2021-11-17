@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
 import "../assets/styles/login.css";
 
 function Login() {
@@ -76,7 +77,10 @@ function Login() {
                 Login
               </button>
               <p className="text-login">
-                Didn't have any account?<a href="/register"> Register here</a>
+                Don't have any account?{" "}
+                <NavLink to="/register" className="log-he">
+                  Register here
+                </NavLink>
               </p>
             </form>
           </div>

@@ -66,7 +66,7 @@ const Slider = () => {
 
               <button className="btn-slider">
                 <NavLink to="/catalogs" />
-                SHOP NOW
+                Explore Now
               </button>
             </div>
           </Slide>

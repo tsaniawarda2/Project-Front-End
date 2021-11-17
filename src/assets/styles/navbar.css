@@ -47,40 +47,37 @@ nav {
 }
 
 .right-nav {
-  font-size: 14px;
-  cursor: pointer;
-  font-family: "Rubik", sans-serif;
+  margin-top: 4px;
 }
-
-.login {
-  color: #3473c5 !important;
-  text-decoration: none;
-  padding: 7px 12px 0px;
-  font-weight: 500;
-  border: 1px solid #3473c5;
-  border-radius: 5px;
-}
-.login:hover,
-.login::after,
-.login:active {
-  background-color: #3473c5;
-  color: white !important;
-}
-
 .cart {
   text-decoration: none;
   background: none;
 }
-
+.cart-nav {
+  margin-top: -2px;
+}
 .btn-nav-login {
-  margin-top: 0 !important;
+  font-size: 14px;
   background-color: #f8fdff;
   border: 2px solid #3473c5;
   padding: 5px 10px;
   border-radius: 10px;
   color: #3473c5;
   font-family: "Rubik", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
+}
+.btn-nav-login:hover {
+  color: #f8fdff;
+  background-color: #3473c5;
+}
+.user-login {
+  font-size: 14px;
+  background-color: #f8fdff;
+  padding: 10px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border: none;
 }
 
 .cartitem {
@@ -93,11 +90,6 @@ nav {
 .cartItemDetail {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-}
-
-.btn-nav-login:hover {
-  color: #f8fdff;
-  background-color: #3473c5;
 }
 
 .delete-icons {
@@ -117,11 +109,22 @@ nav {
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
-  .right {
+@media only screen and (min-width: 381px) and (max-width: 768px) {
+  .right-nav {
     text-align: center;
+    margin: 18px 0px 8px;
   }
-  .cart {
-    display: none;
+  .cart-nav {
+    margin-top: -4px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .right-nav {
+    text-align: center;
+    margin: 24px 0px 12px;
+  }
+  .cart-nav {
+    margin-top: -4px;
   }
 }

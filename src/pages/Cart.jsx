@@ -110,16 +110,18 @@ const Cart = () => {
                 >
                   Checkout
                 </a>
-                <p>
+                <p className="link-cart">
                   You must login before checkout your items.{" "}
-                  <NavLink to="/login">Login here</NavLink>
+                  <NavLink to="/login" className="log-he">
+                    Login here
+                  </NavLink>
                 </p>
               </>
             )}
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

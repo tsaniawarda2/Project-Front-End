@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
 import swal from "sweetalert";
 import "../assets/styles/login.css";
 import { BASEURL } from "../config/api";
@@ -96,7 +97,10 @@ function Register() {
                 Register
               </button>
               <p className="text-register">
-                Already have an account? <a href="/login">Login here</a>
+                Already have an account?{" "}
+                <NavLink to="/login" className="log-he">
+                  Login here
+                </NavLink>
               </p>
             </form>
           </div>

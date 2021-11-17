@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .cart-body {
-  margin-top: 100px;
+  margin: 100px 70px 35px;
 }
 
 .cart {
@@ -19,8 +19,8 @@
 }
 
 .cart-title {
-  font-size: 28px;
-  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   padding-top: 20px;
   margin-left: 50px;
@@ -133,8 +133,6 @@
 .btn-checkout {
   background-color: #ffae01;
   color: #f8fdff;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 18px;
@@ -148,8 +146,6 @@
 .btn-checkout-disabled {
   background-color: grey;
   color: #f8fdff;
-  font-weight: bold;
-  font-family: "Rubik", sans-serif;
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 18px;
@@ -174,6 +170,20 @@
 
 .product-detail > h5 {
   font-size: 16px;
+}
+
+.link-cart {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.log-he {
+  text-decoration: none;
+  color: #3473c5;
+  font-weight: 600;
+}
+.log-he:hover {
+  color: #ffae01;
 }
 
 /* responsive for tablet size */
