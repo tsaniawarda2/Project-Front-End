@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 
 import { DataContext } from "../context/DataProduct";
 
+import Logo from "../assets/image/logo.png";
+
 import "../assets/styles/navbar.css";
 
 export default function Navbar() {
@@ -24,9 +26,9 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
-        <div className="container">
-          <NavLink exact className="navbar-brand fw-bold fs-4 logo" to="/">
-            <h1>BuyMePlease</h1>
+        <div className="container logo">
+          <NavLink exact className="navbar-brand fw-bold fs-4 " to="/">
+            <img src={Logo} alt="icon" className="icon-logo" />
           </NavLink>
           <button
             className="navbar-toggler"

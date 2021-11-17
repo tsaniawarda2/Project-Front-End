@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Paper, Button } from "@material-ui/core";
+import { Box, Grid, Paper } from "@material-ui/core";
 import "../../assets/styles/checkout.css";
 import { renderButton, renderText } from "./checkout";
 import swal from "sweetalert";

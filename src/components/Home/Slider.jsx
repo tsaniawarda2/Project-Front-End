@@ -56,13 +56,13 @@ const Slider = () => {
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
+          <Slide bg={item?.bg} key={item?.id}>
             <div className="imgContainer">
-              <img className="img-slider" src={item.img} />
+              <img className="img-slider" src={item?.img} alt="sliderImg" />
             </div>
             <div className="infoContainer">
-              <div className="title-slider">{item.title}</div>
-              <div className="p-slider">{item.desc}</div>
+              <div className="title-slider">{item?.title}</div>
+              <div className="p-slider">{item?.desc}</div>
 
               <button className="btn-slider">
                 <NavLink to="/catalogs" />

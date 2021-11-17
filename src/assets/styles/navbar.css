@@ -20,6 +20,9 @@ nav {
   font-weight: 700;
   font-size: "24px";
 }
+.icon-logo {
+  width: 84px;
+}
 .navbar-nav {
   list-style: none;
   display: flex;
