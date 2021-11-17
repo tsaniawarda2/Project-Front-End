@@ -116,13 +116,15 @@ export default function Navbar() {
                 </div>
               </div>
               {/* LOGIN */}
-              <NavLink to="/login" className="login ms-lg-3 col">
+              <div className="login ms-lg-3 col">
                 {statusLogin ? (
                   <button className="user-login">{login?.username}</button>
                 ) : (
-                  <button className="btn-nav-login">Login</button>
+                  <NavLink to="/login" className="login ms-lg-3 col">
+                    <button className="btn-nav-login">Login</button>
+                  </NavLink>
                 )}
-              </NavLink>
+              </div>
             </div>
           </div>
         </div>
