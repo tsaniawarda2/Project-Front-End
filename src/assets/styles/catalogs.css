@@ -121,6 +121,9 @@ section {
   color: #3473c5;
   font-weight: 500;
 }
+.selected:focus-visible {
+  outline: none;
+}
 .dropdown-item {
   font-family: "Poppins", sans-serif;
 }
