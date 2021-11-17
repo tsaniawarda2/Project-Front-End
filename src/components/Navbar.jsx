@@ -43,14 +43,7 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="right-nav row">
-              <NavLink to="/login" className="login me-lg-2 col">
-                Login
-              </NavLink>
-
-              <NavLink to="/register" className="register me-lg-2 col">
-                Register
-              </NavLink>
-
+              {/* CART */}
               <div className="cart-nav dropdown col">
                 <button
                   class="btn cart-icon"
@@ -109,13 +102,11 @@ export default function Navbar() {
                   )}
                 </div>
               </div>
-              <NavLink to="/login" className="signin me-3 col">
-                Sign In
+              {/* LOGIN */}
+              <NavLink to="/login" className="login ms-lg-2 col">
+                Login
               </NavLink>
 
-              <NavLink to="/register" className="signup me-3 col">
-                Sign Up
-              </NavLink>
               <div class="d-none" id="account-menu">
                 <div class="nav">
                   <a
