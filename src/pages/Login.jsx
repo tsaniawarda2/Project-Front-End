@@ -15,54 +15,44 @@ function Login() {
   console.log(history, "history");
 
   function handleLogin(e) {
-		e.preventDefault();
-    
-		let password = localStorage.getItem("Password")
-		let username = localStorage.getItem("Username")
-		// console.log(passwordlog, "passlog")
-		// console.log(usernamelog, "usernamelog");
-    // let register = JSON.parse(localStorage.getItem("dataRegister"))
-    // let password = register?.password
-    // let username = register?.username
-    // console.log(register.password, "password");
-    // console.log(register.username, "username");
+    e.preventDefault();
 
-		if(password == null || username == null){
-			console.log("belum register");
-		} else {
-		password = password.replace(/"/g, "");
-		username = username.replace(/"/g, "");
-    // .replace(/"/g,"") is used to remove the double quotes for the string
-		if (!usernamelog || !passwordlog) {
-			swal({
-				title: "Try Again!",
-				text: "All field must be filled, try again!",
-				icon: "warning",
-				button: "Ok!",
-			});
-				console.log("EMPTY");
-		  } else if ((passwordlog !== password) || (usernamelog !== username)) {
-				console.log("salah");
-				swal({
-					title: "Try Again!",
-					text: "Your username or password wrong, try again!",
-					icon: "warning",
-					button: "Ok!",
-				});
-		  } else {
-			const login = {
-				password: passwordlog,
-				username: usernamelog,
-			}
-	
-			// console.log(login);
-	
-			localStorage.setItem("dataLogin", JSON.stringify(login));
-			console.log("berhasil");
-			
-			history.goBack()
-		  }
-	  }
+    let password = localStorage.getItem("Password");
+    let username = localStorage.getItem("Username");
+
+    if (password == null || username == null) {
+      console.log("belum register");
+    } else {
+      password = password.replace(/"/g, "");
+      username = username.replace(/"/g, "");
+      if (!usernamelog || !passwordlog) {
+        swal({
+          title: "Try Again!",
+          text: "All field must be filled, try again!",
+          icon: "warning",
+          button: "Ok!",
+        });
+        console.log("EMPTY");
+      } else if (passwordlog !== password || usernamelog !== username) {
+        console.log("salah");
+        swal({
+          title: "Try Again!",
+          text: "Your username or password wrong, try again!",
+          icon: "warning",
+          button: "Ok!",
+        });
+      } else {
+        const login = {
+          password: passwordlog,
+          username: usernamelog,
+        };
+
+        localStorage.setItem("dataLogin", JSON.stringify(login));
+        console.log("berhasil");
+
+        history.goBack();
+      }
+    }
   }
 
   return (

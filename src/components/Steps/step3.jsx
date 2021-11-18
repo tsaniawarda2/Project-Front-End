@@ -4,7 +4,6 @@ import "../../assets/styles/checkout.css";
 import { renderButton, renderText } from "./checkout";
 import swal from "sweetalert";
 import { BASEURL } from "../../config/api";
-import "../../assets/styles/checkout";
 
 const Step3 = ({ data, handlePrev }) => {
   // console.log(data, "data from 3");

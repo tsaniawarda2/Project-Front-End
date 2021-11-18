@@ -6,7 +6,6 @@ const Filter = () => {
     state: { sort },
     dispatch,
   } = useContext(DataContext);
-  console.log(sort, "--------sort");
   return (
     <>
       <div className="dropdown">

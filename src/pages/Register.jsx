@@ -15,21 +15,18 @@ function Register() {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    
-    // console.log(email, "from email");
-    // console.log(password, "from pass");
+
     localStorage.setItem("Username", JSON.stringify(username));
     localStorage.setItem("Email", JSON.stringify(email));
     localStorage.setItem("Password", JSON.stringify(password));
-    // console.log("Saved in Local Storage");
-    
+
     const form = {
       username: username,
       email: email,
       password: password,
     };
-    
-    if(usernameErr === ""){
+
+    if (usernameErr === "") {
       const payload = form;
       if (form?.email && form?.username && form?.password) {
         fetch(`${BASEURL}/users`, {
@@ -39,15 +36,15 @@ function Register() {
           },
           body: JSON.stringify(payload),
         })
-        .then((response) => {
-          if (response.status === 201) {
-            return response.json();
-          } else {
-            return new Error("Failed to Sign Up");
-          }
-        })
-        .then((data) => {
-          localStorage.setItem("dataRegister", JSON.stringify(form));
+          .then((response) => {
+            if (response.status === 201) {
+              return response.json();
+            } else {
+              return new Error("Failed to Sign Up");
+            }
+          })
+          .then((data) => {
+            localStorage.setItem("dataRegister", JSON.stringify(form));
           })
           .catch((error) => {
             console.log(error);
@@ -55,7 +52,7 @@ function Register() {
           });
       }
       history.push("/login");
-    } else{
+    } else {
       console.log("wrong username");
     }
   }
@@ -76,17 +73,19 @@ function Register() {
                   placeholder="Enter Username"
                   name="name"
                   onChange={(event) => {
-                    if(event.target.value.length < 9){
-                      setUsername(event.target.value)
-                      setUsernameErr("")
+                    if (event.target.value.length < 9) {
+                      setUsername(event.target.value);
+                      setUsernameErr("");
                     } else {
-                      setUsernameErr("Username must be less than equals 8 characters!")
+                      setUsernameErr(
+                        "Username must be less than equals 8 characters!"
+                      );
                     }
                   }}
                 />
                 {usernameErr && (
-                <small className="text-danger">{usernameErr}</small>
-              )}
+                  <small className="text-danger">{usernameErr}</small>
+                )}
               </div>
 
               <div className="form-group">

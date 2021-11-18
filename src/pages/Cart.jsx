@@ -12,7 +12,6 @@ const Cart = () => {
   console.log(cart, "products");
 
   const [total, setTotal] = useState();
-  // const [cartLocal, setCartLocal] = useState();
 
   localStorage.setItem("cart", JSON.stringify(cart));
   localStorage.setItem("total", total);

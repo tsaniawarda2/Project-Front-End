@@ -8,13 +8,12 @@ import { DataContext } from "../context/DataProduct";
 
 import Logo from "../assets/image/LogoBMP.png";
 
-
 import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
   const login = JSON.parse(localStorage.getItem("dataLogin"));
-  const register = JSON.parse(localStorage.getItem("dataRegister"))
+  const register = JSON.parse(localStorage.getItem("dataRegister"));
 
   const [statusLogin, setStatusLogin] = useState(false);
 
@@ -26,9 +25,9 @@ export default function Navbar() {
   });
 
   const handleLogout = () => {
-    localStorage.removeItem("dataLogin")
-    window.location.reload()
-  }
+    localStorage.removeItem("dataLogin");
+    window.location.reload();
+  };
 
   return (
     <>
@@ -79,7 +78,7 @@ export default function Navbar() {
                 <div
                   className="dropdown-menu dropdown-menu-cart"
                   aria-labelledby="dropdownMenuButton"
-                  style={{ minWidth: "250px"}}
+                  style={{ minWidth: "250px" }}
                 >
                   {cart.cart.length > 0 ? (
                     <>
@@ -109,11 +108,7 @@ export default function Navbar() {
                       ))}
 
                       <NavLink to="/cart">
-                        <button
-                          className="btn btn-gotocart"
-                        >
-                          Go To Cart
-                        </button>
+                        <button className="btn btn-gotocart">Go To Cart</button>
                       </NavLink>
                     </>
                   ) : (
@@ -124,22 +119,37 @@ export default function Navbar() {
               {/* LOGIN */}
               <div className="login ms-lg-3 col">
                 {statusLogin ? (
-
                   <>
-                  <div class="dropdown nav-username">
-                    <button className="btn btn-username" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      {login?.username}
-                    </button>
-                    <div className="dropdown-menu dropdwon-menu-username" aria-labelledby="dropdownMenuButton">
-                      <div className="dropdown-item your-account">Your Account:</div>
-                      <div className="dropdown-item">{login?.username}</div>
-                      <div className="dropdown-item">{register?.email}</div>
-                      <button className="dropdown-item btn btn-logout" type="button" onClick={handleLogout}>Logout</button>
+                    <div class="dropdown nav-username">
+                      <button
+                        className="btn btn-username"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        {login?.username}
+                      </button>
+                      <div
+                        className="dropdown-menu dropdwon-menu-username"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <div className="dropdown-item your-account">
+                          Your Account:
+                        </div>
+                        <div className="dropdown-item">{login?.username}</div>
+                        <div className="dropdown-item">{register?.email}</div>
+                        <button
+                          className="dropdown-item btn btn-logout"
+                          type="button"
+                          onClick={handleLogout}
+                        >
+                          Logout
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  {/* <button className="user-login" onClick={handleLogout}>{login?.username}</button> */}
                   </>
-
                 ) : (
                   <NavLink to="/login" className="login ms-lg-3 col">
                     <button className="btn-nav-login">Login</button>
