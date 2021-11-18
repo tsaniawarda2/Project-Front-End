@@ -22,20 +22,22 @@ export default function Catalogs() {
 
   let componentMounted = true;
 
-  useEffect(() => {
-    const getProducts = async () => {
-      setLoading(true);
-      const response = await fetch(`${BASEURL}/products`);
-      if (componentMounted) {
-        setData(await response.clone().json());
-        setFilter(await response.json());
-        setLoading(false);
-      }
-      return () => {
-        componentMounted = false;
-      };
+  const getProducts = async () => {
+    setLoading(true);
+    const response = await fetch(`${BASEURL}/products`);
+    if (componentMounted) {
+      setData(await response.clone().json());
+      setFilter(await response.json());
+      setLoading(false);
+    }
+    return () => {
+      componentMounted = false;
     };
+  };
+
+  useEffect(() => {
     getProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const Loading = () => {
@@ -109,13 +111,12 @@ export default function Catalogs() {
             {condition?.map((cond, idx) => (
               <>
                 <li key={idx}>
-                  <a
+                  <button
                     className="dropdown-item"
-                    href="#"
                     onClick={() => filterCondition(cond)}
                   >
                     {cond}
-                  </a>
+                  </button>
                 </li>
               </>
             ))}

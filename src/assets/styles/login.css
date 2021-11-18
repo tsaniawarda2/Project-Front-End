@@ -1,117 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .outer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-    background: url("../image/checkout-bg.png");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  background: url("../image/checkout-bg.png");
+  height: 100vh;
+}
+
+.inner {
+  width: 550px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.outer .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.outer h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+  font-family: "Rubik", sans-serif;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.btn-login,
+.btn-register {
+  background-color: #ffae01 !important;
+  height: 100%;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  padding: 5px 15px;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+  color: white !important;
+  background-color: #3473c5 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.text-login,
+.text-register {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 381px) and (max-width: 768px) {
+  .outer {
+    background-repeat: repeat;
+    object-fit: cover;
     height: 100vh;
+    flex-direction: row;
+    padding: 0 15px;
   }
-  
-  .inner {
-    width: 550px;
-    margin: auto;
-    background: #ffffff;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    padding: 40px 55px 45px 55px;
-    border-radius: 10px;
-    transition: all .3s;
+}
+
+@media only screen and (max-width: 380px) {
+  .outer {
+    flex-direction: row;
+    background-repeat: repeat;
+    object-fit: cover;
+    height: 100vh;
+    padding: 0 15px;
   }
-  
-  .outer .form-control:focus {
-    border-color: #167bff;
-    box-shadow: none;
-  }
-  
+
   .outer h3 {
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    line-height: 1;
-    padding-bottom: 20px;
-    font-family: "Rubik", sans-serif;
+    margin-bottom: -5px;
   }
 
-  .form-group{
-    margin-top: 10px;
+  .inner {
+    padding: 25px;
   }
-  
-  label{
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
+
+  .form-group {
+    margin-top: 5px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .btn-login,
+  .btn-register {
     font-size: 16px;
   }
 
-  .btn-login, .btn-register{
-    background-color: #FFAE01!important;
-    height: 100%;
-    width: 100%;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    padding: 5px 15px;
-    margin-top: 25px;
-    font-size: 18px;
+  .text-login,
+  .text-register {
+    font-size: 12px;
   }
-
-  .btn-login:hover, .btn-register:hover{
-    color: white!important;
-    background-color: #3473C5!important;
-    width: 100%;
-    height: 100%;
-  }
-
-  .text-login, .text-register{
-    margin-top: 15px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-  }
-
-  @media only screen and (min-width: 381px) and (max-width: 768px) {
-    .outer{
-      background-repeat: repeat;
-      object-fit: cover;
-      height: 100vh;
-      flex-direction: row;
-      padding: 0 15px;
-    }
-  }
-
-  @media only screen and (max-width: 380px) {    
-    .outer{
-      flex-direction: row;
-      background-repeat: repeat;
-      object-fit: cover;
-      height: 100vh;
-      padding: 0 15px;
-    }
-
-    .outer h3{
-      margin-bottom: -5px;
-    }
-
-    .inner{
-      padding: 25px;
-    }
-
-    .form-group{
-      margin-top: 5px;
-    }
-
-    label{
-      font-size: 14px;
-    }
-
-    .btn-login, .btn-register{
-      font-size: 16px;
-    }
-
-    .text-login, .text-register{
-      font-size: 12px;
-    }
-  }
+}

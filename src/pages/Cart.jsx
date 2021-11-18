@@ -21,10 +21,10 @@ const Cart = () => {
     setTotal(cart.cart.reduce((acc, curr) => acc + Number(curr.price), 0));
   }, [cart]);
 
-  const login = localStorage.getItem("dataLogin")
-  let statusLogin = false
-  if(login !== null){
-     statusLogin = true
+  const login = localStorage.getItem("dataLogin");
+  let statusLogin = false;
+  if (login !== null) {
+    statusLogin = true;
   }
 
   return (
@@ -38,7 +38,7 @@ const Cart = () => {
               {cart.cart.map((product) => (
                 <li className="list-group-item" key={product.id}>
                   <div className="row">
-                    <div className="col-lg-3 col-md-3">
+                    <div className="col-lg-4 col-md-4 col-sm-12">
                       <NavLink to={`/detail/${product?.id}`}>
                         <img
                           className="cartItemImage"
@@ -47,7 +47,7 @@ const Cart = () => {
                         />
                       </NavLink>
                     </div>
-                    <div className="col-lg-7 col-md-7 col-sm-12 mt-4 column-2">
+                    <div className="col-lg-6 col-md-6 col-sm-12 column-2">
                       <h4>{product.name}</h4>
                       <h5 className="price-cart">IDR {product.price}</h5>
                       <h6>{product.description}</h6>
@@ -97,30 +97,31 @@ const Cart = () => {
               Total:
               <span>IDR {total}</span>
             </span>
-            {statusLogin?(
-              <a
-              className="btn btn-checkout"
-              href="/checkout"
-              role="button"
-            >
-              Checkout
-            </a>
-            ):(
-            <>
-              <a
-              className="btn btn-checkout-disabled"
-              href="/checkout"
-              role="button"
-            >
-              Checkout
-            </a>
-            <p>You must login before checkout your items. <NavLink to="/login">Login here</NavLink></p>
-            </>
+            {statusLogin ? (
+              <a className="btn btn-checkout" href="/checkout" role="button">
+                Checkout
+              </a>
+            ) : (
+              <>
+                <a
+                  className="btn btn-checkout-disabled"
+                  href="/checkout"
+                  role="button"
+                >
+                  Checkout
+                </a>
+                <p className="link-cart">
+                  You must login before checkout your items.{" "}
+                  <NavLink to="/login" className="log-he">
+                    Login here
+                  </NavLink>
+                </p>
+              </>
             )}
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

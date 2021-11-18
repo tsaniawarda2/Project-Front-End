@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 .wrapper {
-  padding: 90px 0px 30px;
+  padding: 88px 0px 60px;
   display: flex;
 }
 
@@ -142,5 +142,8 @@
   }
   .decs-cond {
     font-size: 14px;
+  }
+  .add-container {
+    width: 54px;
   }
 }

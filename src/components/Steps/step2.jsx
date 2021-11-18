@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Grid, Paper } from "@material-ui/core";
-import "../../assets/styles/checkout.css"
+import "../../assets/styles/checkout.css";
 import {
   renderButton,
   renderInputField,
@@ -13,37 +13,38 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
     cardNumber: state?.data?.cardNumber || "",
     expiryDate: state?.data?.expiryDate || "",
     cvv: state?.data?.cvv || "",
-  })
+  });
 
-  const [isDisabled, setIsDisabled] = useState(true)
+  const [isDisabled, setIsDisabled] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
     setData({
       cardNumber: state?.data?.cardNumber,
       expiryDate: state?.data?.expiryDate,
       cvv: state?.data?.cvv,
-    })
-    validatedInput()
-  },[state])
+    });
+    validatedInput();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
 
   // console.log(data, "<< data")
 
-  function validatedInput(){
+  function validatedInput() {
     let isValid = true;
-    if(!data?.cardNumber){
-      isValid = false
+    if (!data?.cardNumber) {
+      isValid = false;
     }
-    if(!data?.expiryDate){
-      isValid = false
+    if (!data?.expiryDate) {
+      isValid = false;
     }
-    if(!data?.cvv){
-      isValid = false
+    if (!data?.cvv) {
+      isValid = false;
     }
-    
-    if(isValid){
-      setIsDisabled(false)
-    } else{
-      setIsDisabled(true)
+
+    if (isValid) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
     }
   }
 
@@ -105,7 +106,7 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
         </Grid>
       </Grid>
 
-      <Grid container component={Box} justify='flex-end' mt={2} p={2}>
+      <Grid container component={Box} justify="flex-end" mt={2} p={2}>
         <Box ml={2}>
           {renderButton({
             label: "Back",
@@ -113,7 +114,9 @@ const Step2 = ({ state, handleChange, handleNext, handlePrev }) => {
             onClick: handlePrev,
           })}
         </Box>
-        <Box ml={2}>{renderButton({ label: "Next", onClick: handleNext, isDisabled })}</Box>
+        <Box ml={2}>
+          {renderButton({ label: "Next", onClick: handleNext, isDisabled })}
+        </Box>
       </Grid>
     </Paper>
   );

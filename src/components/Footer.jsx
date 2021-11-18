@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   Facebook,
   Instagram,
@@ -55,10 +56,31 @@ export default function Footer() {
         <Center>
           <Title>Useful Links</Title>
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Catalogs</ListItem>
-            <ListItem>Cart</ListItem>
-            <ListItem>Terms</ListItem>
+            <ListItem>
+              <NavLink exact to="/" className="link-footer">
+                Home
+              </NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink exact to="/register" className="link-footer">
+                Register
+              </NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink exact to="/catalogs" className="link-footer">
+                Catalogs
+              </NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink exact to="/login" className="link-footer">
+                Login
+              </NavLink>
+            </ListItem>
+            <ListItem>
+              <NavLink exact to="/cart" className="link-footer">
+                Cart
+              </NavLink>
+            </ListItem>
           </List>
         </Center>
         <Right>

@@ -6,28 +6,36 @@ import { NavLink } from "react-router-dom";
 
 import { DataContext } from "../context/DataProduct";
 
+import Logo from "../assets/image/LogoBMP.png";
+
 import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
-  const login = JSON.parse(localStorage.getItem("dataLogin"))
+  const login = JSON.parse(localStorage.getItem("dataLogin"));
+  const register = JSON.parse(localStorage.getItem("dataRegister"))
 
-  const [statusLogin, setStatusLogin] = useState(false)
-  
-  useEffect(()=>{
+  const [statusLogin, setStatusLogin] = useState(false);
 
-    if(login !== null){
-      setStatusLogin(true)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (login !== null) {
+      setStatusLogin(true);
     }
-  })
+  });
   console.log(login);
+
+  const handleLogout = () => {
+    localStorage.removeItem("dataLogin")
+    window.location.reload()
+  }
 
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
-        <div className="container">
-          <NavLink exact className="navbar-brand fw-bold fs-4 logo" to="/">
-            <h1>BuyMePlease</h1>
+        <div className="container logo">
+          <NavLink exact className="navbar-brand fw-bold fs-4 " to="/">
+            <img src={Logo} alt="icon" className="icon-logo" />
           </NavLink>
           <button
             className="navbar-toggler"
@@ -54,6 +62,7 @@ export default function Navbar() {
               </li>
             </ul>
             <div className="right-nav row">
+              {/* CART */}
               <div className="cart-nav dropdown col">
                 <button
                   class="btn cart-icon"
@@ -68,9 +77,9 @@ export default function Navbar() {
                   </Badge>
                 </button>
                 <div
-                  className="dropdown-menu dropdown-menu-right pull-right"
+                  className="dropdown-menu dropdown-menu-cart"
                   aria-labelledby="dropdownMenuButton"
-                  style={{ minWidth: 300 }}
+                  style={{ minWidth: "250px"}}
                 >
                   {cart.cart.length > 0 ? (
                     <>
@@ -85,7 +94,8 @@ export default function Navbar() {
                             <span>{product.name}</span>
                             <span>IDR {product.price}</span>
                           </div>
-                          <Delete className="delete-icons"
+                          <Delete
+                            className="delete-icons"
                             fontSize="20px"
                             style={{ cursor: "pointer" }}
                             onClick={() =>
@@ -101,7 +111,6 @@ export default function Navbar() {
                       <NavLink to="/cart">
                         <button
                           className="btn btn-gotocart"
-                          style={{ width: "95%", margin: "0 10px" }}
                         >
                           Go To Cart
                         </button>
@@ -112,17 +121,29 @@ export default function Navbar() {
                   )}
                 </div>
               </div>
-              <NavLink to="/login" className="login me-lg-2 col">
+              {/* LOGIN */}
+              <div className="login ms-lg-3 col">
                 {statusLogin ? (
-                  <button className="btn-nav-login">
-                    {login?.username}
-                  </button>
+                  <>
+                  <div class="dropdown nav-username">
+                    <button className="btn btn-username" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {login?.username}
+                    </button>
+                    <div className="dropdown-menu dropdwon-menu-username" aria-labelledby="dropdownMenuButton">
+                      <div className="dropdown-item your-account">Your Account:</div>
+                      <div className="dropdown-item">{login?.username}</div>
+                      <div className="dropdown-item">{register?.email}</div>
+                      <button className="dropdown-item btn btn-logout" type="button" onClick={handleLogout}>Logout</button>
+                    </div>
+                  </div>
+                  {/* <button className="user-login" onClick={handleLogout}>{login?.username}</button> */}
+                  </>
                 ) : (
-                  <button className="btn-nav-login">
-                    Login
-                  </button>
-                )} 
-              </NavLink>
+                  <NavLink to="/login" className="login ms-lg-3 col">
+                    <button className="btn-nav-login">Login</button>
+                  </NavLink>
+                )}
+              </div>
             </div>
           </div>
         </div>
