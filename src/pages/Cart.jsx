@@ -38,7 +38,7 @@ const Cart = () => {
               {cart.cart.map((product) => (
                 <li className="list-group-item" key={product.id}>
                   <div className="row">
-                    <div className="col-lg-3 col-md-3">
+                    <div className="col-lg-4 col-md-4 col-sm-12">
                       <NavLink to={`/detail/${product?.id}`}>
                         <img
                           className="cartItemImage"
@@ -47,7 +47,7 @@ const Cart = () => {
                         />
                       </NavLink>
                     </div>
-                    <div className="col-lg-7 col-md-7 col-sm-12 mt-4 column-2">
+                    <div className="col-lg-6 col-md-6 col-sm-12 column-2">
                       <h4>{product.name}</h4>
                       <h5 className="price-cart">IDR {product.price}</h5>
                       <h6>{product.description}</h6>
