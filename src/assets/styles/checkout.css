@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.FormComponent-formContainer-1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../image/checkout-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.FormComponent-form-2 {
+  padding: 25px;
+  min-height: 350px;
+  height: auto;
+}
+
+.FormComponent-formTitle-3 {
+  text-align: center;
+  margin: "10px 0px 30px 0px";
+}
+
+.FormComponent-steps-4 {
+  padding: 24px;
+}
+
+.box-top h6 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 28px !important;
+  font-family: "Rubik", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active {
+  color: #3473c5;
+}
+
+.stepper {
+  margin-bottom: 15px;
+  padding-bottom: 30px;
+}
+
+.MuiButton-outlined:not(:disabled) {
+  border-color: #ffae01 !important;
+}
+
+.MuiButton-root:disabled {
+  color: #3473c5;
+}
+
+.MuiButton-root {
+  font-family: "Rubik", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
+.MuiButton-root:disabled {
+  color: gray;
+}
+
+.MuiButton-root:not(:disabled) {
+  color: #ffae01 !important;
+}
+
+.MuiButton-root:not(:disabled):hover {
+  color: white !important;
+  background-color: #ffae01;
+}
+
+.button-pay {
+  background-color: #ffae01 !important;
+  height: 100%;
+  width: 100%;
+  color: white !important;
+  border: none;
+  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+.row-price,
+.detail-item {
+  display: flex;
+  flex-wrap: nowrap !important;
+}
+
+.button-pay:hover {
+  color: white !important;
+  background-color: #3473c5 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.order-review {
+  width: 60%;
+}
+
+.order-review-title h6,
+.payment-detail h6,
+.shipping-data h6 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
+}
+
+.title-detail {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.order-review {
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.price,
+.total-price-stepper {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.total-price-title h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.total-price-stepper h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.swal-title {
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+}
+
+.swal-text {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.swal-button {
+  background-color: #ffae01;
+}
+
+.swal-button:hover {
+  background-color: #3473c5;
+}
+
+@media only screen and (min-width: 381px) and (max-width: 768px) {
+  .FormComponent-formContainer-1 {
+    background-repeat: repeat;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .total-price-stepper h5 {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .FormComponent-formContainer-1 {
+    height: 100%;
+    background-repeat: repeat;
+    object-fit: cover;
+  }
+
+  .box-top h6 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px !important;
+  }
+
+  .total-price-stepper h5 {
+    padding: 0;
+  }
+
+  .order-review {
+    padding-left: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .row-price{
+    justify-content: space-between;
+  }
+
+  .MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .MuiButton-root {
+    font-size: 16px !important;
+  }
+
+  .order-review-title h6,
+  .payment-detail h6,
+  .shipping-data h6 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .button-pay {
+    height: 40px;
+    margin-top: 5px;
+  }
+}

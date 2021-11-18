@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+.navbar > .container{
+  padding-right: 50px;
+}
+
+nav {
+  font-family: "Rubik", sans-serif !important;
+  background-color: #f8fdff;
+}
+#nav-top .nav-link.active {
+  position: relative;
+}
+#nav-top .nav-link.active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #3473c5;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: "24px";
+}
+.icon-logo {
+  width: 250px;
+}
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 500;
+}
+#nav-top .nav-item {
+  margin-right: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+#nav-top .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 4px;
+  background-color: #3473c5;
+  transition: width 0.3s ease-out;
+}
+#nav-top .nav-item:hover.nav-item::after {
+  width: 100%;
+}
+
+.right-nav {
+  margin-top: 4px;
+
+}
+.cart {
+  text-decoration: none;
+  background: none;
+}
+.cart-nav {
+  margin-top: -2px;
+}
+.dropdown-menu-cart{
+  padding: 10px;
+}
+.btn-nav-login {
+  font-size: 14px;
+  background-color: #f8fdff;
+  border: 2px solid #3473c5;
+  padding: 5px 10px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border: 2px solid #3473c5;
+  border-radius: 20px;
+  width: 90px;
+}
+.btn-nav-login:hover {
+  color: #f8fdff;
+  background-color: #3473c5;
+}
+.user-login {
+  font-size: 14px;
+  background-color: #f8fdff;
+  padding-top: 6px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border: none;
+}
+.user-login:focus-visible {
+  outline: none;
+}
+.btn-username{
+  font-size: 14px;
+  background-color: #f8fdff;
+  border: 2px solid #3473c5;
+  padding: 5px 10px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+
+  border: 2px solid #3473c5;
+  border-radius: 20px;
+  width: 90px;
+}
+.btn-username:hover {
+  color: #f8fdff;
+  background-color: #3473c5;
+}
+
+.cartitem {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  padding: 0 10px;
+}
+
+.cartItemDetail {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.delete-icons {
+  color: #ffae01;
+}
+
+.btn-gotocart {
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: "Rubik", sans-serif;
+  background-color: #ffae01;
+  border-color: #ffae01;
+  color: white;
+  width: 100%;
+}
+
+.btn-gotocart:hover {
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: white;
+}
+
+.dropdown-menu-username{
+  padding: 10px!important;
+}
+.your-account{
+  font-weight: 600;
+}
+.btn-logout{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: "Rubik", sans-serif;
+  background-color: #ffae01;
+  border-color: #ffae01;
+  color: white;
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn-logout:hover {
+
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: white;
+}
+
+@media only screen and (min-width: 381px) and (max-width: 768px) {
+  .right-nav {
+
+    text-align: center;
+    margin: 18px 0px 8px;
+  }
+  .cart-nav {
+    margin-top: -4px;
+  }
+
+  .icon-logo {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .right-nav {
+    text-align: center;
+    margin: 24px 0px 12px;
+  }
+  .cart-nav {
+    margin-top: -4px;
+  }
+
+  .icon-logo {
+    width: 150px;
+  }
+}

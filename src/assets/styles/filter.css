@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.form {
+  margin-bottom: -3px;
+  padding-left: 12px;
+}
+.form1 {
+  padding-top: 4px;
+}
+.form-check-inline {
+  margin-right: 0;
+}
+.selected.show .icon {
+  transform: rotate(180deg);
+  margin-left: 10px;
+}
+.icon,
+.icon-cond {
+  position: absolute;
+  padding-left: 10px;
+  top: 5px;
+}
+.form-check-input:checked {
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: #3473c5;
+}
+.f-menu {
+  font-size: 14px;
+  font-weight: 400;
+}
