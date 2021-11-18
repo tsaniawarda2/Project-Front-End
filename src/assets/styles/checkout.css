@@ -6,7 +6,7 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   background: url("../image/checkout-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -194,6 +194,11 @@
   .order-review {
     padding-left: 10px;
     width: 100%;
+    padding: 0;
+  }
+
+  .row-price{
+    justify-content: space-between;
   }
 
   .MuiStepLabel-label.MuiStepLabel-alternativeLabel {
@@ -214,5 +219,6 @@
 
   .button-pay {
     height: 40px;
+    margin-top: 5px;
   }
 }

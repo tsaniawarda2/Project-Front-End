@@ -120,7 +120,7 @@ const Step3 = ({ data, handlePrev }) => {
         </Box>
 
         <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-          <div className="order-review flex-column px-5">
+          <div className="order-review flex-column">
             <h5 className="title-detail">Detail Items</h5>
             <div className="flex-row">
               {arrCart.cart.map((product) => (
