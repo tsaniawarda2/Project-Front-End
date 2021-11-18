@@ -97,18 +97,22 @@ const Cart = () => {
               <span>IDR {total}</span>
             </span>
             {statusLogin ? (
-              <a className="btn btn-checkout" href="/checkout" role="button">
+              <NavLink
+                className="btn btn-checkout"
+                to="/checkout"
+                role="button"
+              >
                 Checkout
-              </a>
+              </NavLink>
             ) : (
               <>
-                <a
+                <NavLink
                   className="btn btn-checkout-disabled"
-                  href="/checkout"
+                  to="/checkout"
                   role="button"
                 >
                   Checkout
-                </a>
+                </NavLink>
                 <p className="link-cart">
                   You must login before checkout your items.{" "}
                   <NavLink to="/login" className="log-he">
