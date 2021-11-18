@@ -36,7 +36,7 @@ export const Center = styled.div`
   text-align: center;
   margin: 30px 85px;
   ${mobile({ display: "none" })}
-  ${tablet({ margin: "30px 15px" })}
+  ${tablet({ display: "none" })}
 `;
 
 export const Title = styled.h3`
@@ -60,7 +60,7 @@ export const Right = styled.div`
   flex: 1;
   margin: 30px 85px 30px 0px;
   ${mobile({ display: "none" })}
-  ${tablet({ marginRight: "40px" })};
+  ${tablet({ margin: "30px 28px 15px 45px" })};
 `;
 
 export const ContactItem = styled.div`

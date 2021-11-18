@@ -94,11 +94,11 @@
 
 @media only screen and (min-width: 381px) and (max-width: 768px) {
   .image-container {
-    width: 90%;
-    height: 106%;
-    padding: 75px 100px;
+    width: 74%;
+    height: 100%;
+    padding: 64px 90px;
     margin-top: -25px;
-    margin-left: 40px;
+    margin-left: 60px;
   }
   #detail-img {
     height: 55vh;
@@ -108,6 +108,11 @@
   .info {
     padding: 75px 10px 15px;
     margin: 0px;
+    text-align: center;
+  }
+  .add-container {
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -127,6 +132,7 @@
   .info {
     padding: 65px 20px 0px;
     margin: 0px;
+    text-align: center;
   }
   .info h1 {
     font-size: 36px;
@@ -136,6 +142,10 @@
     margin: 28px 0px 24px;
   }
   .add-container {
-    width: 54px;
+    width: 168px;
+    margin: 30px 72px;
+  }
+  .add-container .btn-success {
+    margin-left: 28px;
   }
 }
