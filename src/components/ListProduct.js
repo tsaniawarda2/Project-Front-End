@@ -10,16 +10,16 @@ export default function ListProduct(props) {
   const { data } = props;
 
   const {
-    filterState: { sort },
+    state: { sort },
   } = useContext(DataContext);
 
   // FILTER PRICE
   const transformProducts = () => {
     let sortedProducts = data;
-    console.log(sortedProducts, "---------sorted");
+
     if (sort) {
       sortedProducts = sortedProducts.sort((a, b) =>
-        sort === "lowToHigh" ? a.price - b.price : b.price - a.price
+        sort === "Low-High" ? a.price - b.price : b.price - a.price
       );
     }
     return sortedProducts;

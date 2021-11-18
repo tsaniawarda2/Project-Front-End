@@ -55,6 +55,7 @@ nav {
 
 .right-nav {
   margin-top: 4px;
+
 }
 .cart {
   text-decoration: none;
@@ -102,6 +103,7 @@ nav {
   color: #3473c5;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+
   border: 2px solid #3473c5;
   border-radius: 20px;
   width: 90px;
@@ -163,6 +165,7 @@ nav {
 }
 
 .btn-logout:hover {
+
   background-color: #3473c5;
   border-color: #3473c5;
   color: white;
@@ -170,6 +173,7 @@ nav {
 
 @media only screen and (min-width: 381px) and (max-width: 768px) {
   .right-nav {
+
     text-align: center;
     margin: 18px 0px 8px;
   }

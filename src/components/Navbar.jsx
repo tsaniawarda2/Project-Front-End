@@ -8,6 +8,7 @@ import { DataContext } from "../context/DataProduct";
 
 import Logo from "../assets/image/LogoBMP.png";
 
+
 import "../assets/styles/navbar.css";
 
 export default function Navbar() {
@@ -23,7 +24,6 @@ export default function Navbar() {
       setStatusLogin(true);
     }
   });
-  console.log(login);
 
   const handleLogout = () => {
     localStorage.removeItem("dataLogin")
@@ -124,6 +124,7 @@ export default function Navbar() {
               {/* LOGIN */}
               <div className="login ms-lg-3 col">
                 {statusLogin ? (
+
                   <>
                   <div class="dropdown nav-username">
                     <button className="btn btn-username" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -138,6 +139,7 @@ export default function Navbar() {
                   </div>
                   {/* <button className="user-login" onClick={handleLogout}>{login?.username}</button> */}
                   </>
+
                 ) : (
                   <NavLink to="/login" className="login ms-lg-3 col">
                     <button className="btn-nav-login">Login</button>

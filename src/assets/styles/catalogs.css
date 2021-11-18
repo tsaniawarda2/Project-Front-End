@@ -131,6 +131,13 @@ section {
   background-color: #3473c5;
 }
 
+.dropdown-menu.show {
+  background-color: #f8fdff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  min-width: 118px;
+}
+
 /* === LIST PRODUCT ===   */
 .in-stock,
 .out-stock {
