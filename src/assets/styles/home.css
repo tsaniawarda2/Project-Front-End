@@ -63,7 +63,7 @@
   text-shadow: 2px 2px 4px #82808a;
 }
 .cat-title h1 {
-  font-size: 42px!important;
+  font-size: 42px !important;
   font-family: "Poppins", sans-serif;
   color: white;
   margin-bottom: 32px;
@@ -130,6 +130,17 @@ hr {
 .link-footer:hover {
   color: white;
 }
+.logo-footer {
+  width: 260px;
+  margin-left: -20px;
+}
+.sect-footer {
+  background-color: #3473c5;
+  display: flex;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
 @media only screen and (min-width: 381px) and (max-width: 768px) {
   .section-slide {
     display: none;
@@ -170,5 +181,13 @@ hr {
   .copyright {
     padding: 15px 20px;
     font-size: 10px;
+  }
+  .sect-footer {
+    text-align: center;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  .logo-footer {
+    margin-left: 20px;
   }
 }
