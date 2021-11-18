@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { mobile, tablet } from "./responsive";
 
-export const Container = styled.div`
-  background-color: #3473c5;
-  display: flex;
-  color: white;
-  ${mobile({ flexDirection: "column" })}
-`;
-
 export const Left = styled.div`
   flex: 1;
   display: flex;
@@ -17,14 +10,13 @@ export const Left = styled.div`
   ${tablet({ marginLeft: "40px" })};
 `;
 
-export const Logo = styled.h1``;
-
 export const Desc = styled.p`
   margin: 20px 0px;
 `;
 
 export const SocialContainer = styled.div`
   display: flex;
+  ${mobile({ justifyContent: "center" })}
 `;
 
 export const SocialIcon = styled.div`

@@ -12,12 +12,10 @@ import {
 import {
   Center,
   ContactItem,
-  Container,
   Desc,
   Left,
   List,
   ListItem,
-  Logo,
   Payment,
   Right,
   SocialContainer,
@@ -26,13 +24,17 @@ import {
 } from "../assets/styles/footer";
 
 import "../assets/styles/home.css";
+
+import LogoFooter from "../assets/image/logoFooter.png";
+
 export default function Footer() {
   return (
     <>
-      <Container>
+      <div className="sect-footer">
         <Left>
-          <Logo>BuyMePlease</Logo>
-          <Desc>
+          <img src={LogoFooter} alt="icon" className="logo-footer" />
+
+          <Desc style={{ letterSpacing: "1px" }}>
             We are the first ecommerce start-up that's focusing on providing
             customers with second hand goods with the highest quality and lowest
             price possible. For more information, please visit us on these
@@ -99,7 +101,7 @@ export default function Footer() {
           </ContactItem>
           <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
         </Right>
-      </Container>
+      </div>
       <hr />
       <div class="text-center">
         <p class="copyright">Created By BuyMePlease | All rights reserved</p>
