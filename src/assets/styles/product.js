@@ -20,11 +20,13 @@ export const Section = styled.div`
   flex: 1;
   margin: 15px;
   min-width: 205px;
+  box-shadow: 1px 1px 8px #cfcfcf;
   height: 245px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
+  border-radius: 5px;
   position: relative;
   &:hover ${Info} {
     opacity: 1;
@@ -41,6 +43,8 @@ export const Circle = styled.div`
 
 export const Image = styled.img`
   height: 75%;
+  width: 90%;
+  object-fit: cover;
   z-index: 2;
 `;
 

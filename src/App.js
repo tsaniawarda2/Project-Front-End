@@ -20,7 +20,9 @@ function App() {
           exact
           path="/login"
           render={(props) => {
-            if (localStorage.getItem("dataLogin")) {
+            if(!localStorage.getItem("dataRegister")){
+              return <Redirect to="/register"/>
+            } else if (localStorage.getItem("dataLogin")) {
               return <Redirect to="/" />;
             } else {
               return <Login {...props} />;

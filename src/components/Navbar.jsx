@@ -6,13 +6,15 @@ import { NavLink } from "react-router-dom";
 
 import { DataContext } from "../context/DataProduct";
 
-import Logo from "../assets/image/logo.png";
+import Logo from "../assets/image/LogoBMP.png";
+
 
 import "../assets/styles/navbar.css";
 
 export default function Navbar() {
   const { state: cart, dispatch } = useContext(DataContext);
   const login = JSON.parse(localStorage.getItem("dataLogin"));
+  const register = JSON.parse(localStorage.getItem("dataRegister"))
 
   const [statusLogin, setStatusLogin] = useState(false);
 
@@ -22,7 +24,11 @@ export default function Navbar() {
       setStatusLogin(true);
     }
   });
-  console.log(login);
+
+  const handleLogout = () => {
+    localStorage.removeItem("dataLogin")
+    window.location.reload()
+  }
 
   return (
     <>
@@ -71,9 +77,9 @@ export default function Navbar() {
                   </Badge>
                 </button>
                 <div
-                  className="dropdown-menu dropdown-menu-right pull-right"
+                  className="dropdown-menu dropdown-menu-cart"
                   aria-labelledby="dropdownMenuButton"
-                  style={{ minWidth: 300 }}
+                  style={{ minWidth: "250px"}}
                 >
                   {cart.cart.length > 0 ? (
                     <>
@@ -105,7 +111,6 @@ export default function Navbar() {
                       <NavLink to="/cart">
                         <button
                           className="btn btn-gotocart"
-                          style={{ width: "95%", margin: "0 10px" }}
                         >
                           Go To Cart
                         </button>
@@ -119,7 +124,22 @@ export default function Navbar() {
               {/* LOGIN */}
               <div className="login ms-lg-3 col">
                 {statusLogin ? (
-                  <button className="user-login">{login?.username}</button>
+
+                  <>
+                  <div class="dropdown nav-username">
+                    <button className="btn btn-username" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {login?.username}
+                    </button>
+                    <div className="dropdown-menu dropdwon-menu-username" aria-labelledby="dropdownMenuButton">
+                      <div className="dropdown-item your-account">Your Account:</div>
+                      <div className="dropdown-item">{login?.username}</div>
+                      <div className="dropdown-item">{register?.email}</div>
+                      <button className="dropdown-item btn btn-logout" type="button" onClick={handleLogout}>Logout</button>
+                    </div>
+                  </div>
+                  {/* <button className="user-login" onClick={handleLogout}>{login?.username}</button> */}
+                  </>
+
                 ) : (
                   <NavLink to="/login" className="login ms-lg-3 col">
                     <button className="btn-nav-login">Login</button>

@@ -1,145 +1,190 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "Topped Dress Floral",
       "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/84b008fdf38016ae119a8ead7cb16bb8d575ab0c_xxl-1.jpg",
       "price": 150000,
       "description": "Calf-length dress in a cotton weave with a smocked bodice. Narrow, adjustable, detachable shoulder straps and a frill trim at the top. Unlined.",
       "condition": "good",
       "category": "fashion",
-      "inStock": false
+      "inStock": true,
+      "date": "02 Juni 2020",
+      "id": "1"
     },
     {
-      "id": 2,
-      "name": "Short Top",
-      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/f0e6770cc58cbf585caf009b8722cad262cad9c0_xxl-1.jpg",
-      "price": 95000,
-      "description": "Short top in soft seersucker with a square neckline, narrow elastication at the top and wide, smocked shoulder straps. Smocking at the waist and a flared peplum.",
-      "condition": "very good",
-      "category": "fashion",
-      "inStock": true
-    },
-    {
-      "id": 3,
-      "name": "Nike Sportswear Swoosh",
-      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a24b7ad6-d6d1-4db2-9b14-16bf30d22812/sportswear-swoosh-french-terry-hoodie-7NmqH4.png",
-      "price": 450000,
-      "description": "The Nike Sportswear Swoosh Full-Zip Hoodie shows love for the logo that started it all.Printed and embroidered details add texture and style to this versatile French terry layer.",
-      "condition": "excellent",
-      "category": "fashion",
-      "inStock": true
-    },
-    {
-      "id": 4,
-      "name": "Cotton Cap",
-      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/558e37408f0f7cc2676459048a810d643002955c_xxl-1.jpg",
-      "price": 120000,
-      "description": "Blank Staples is a streetwear collection of minimalistic pieces that are the perfect canvas for your personal style and creativity. This stylish twill cap is made from organic cotton and recycled cotton.",
-      "condition": "very good",
-      "category": "fashion",
-      "inStock": true
-    },
-    {
-      "id": 5,
-      "name": "Nike Air Force 1 '07 Premium",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c678adbc-3bfb-41c8-8ca2-812f95be7c82/air-force-1-07-shoes-dr1bJC.png",
-      "price": 652500,
-      "description": "Let your youthful optimism shine in the Nike Air Force 1 '07 Premium, the b-ball original that proves you're never too old to go pineapples.",
-      "condition": "moderate",
-      "category": "fashion",
-      "inStock": true
-    },
-    {
-      "id": 6,
-      "name": "Nike Run Swift 2",
-      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/f690d9fe-26ea-4cb2-9414-827365cfc3c0/run-swift-2-road-running-shoes-Pl8gq3.png",
-      "price": 560500,
-      "description": "The Nike Run Swift 2 is designed with shorter miles in mind.An updated yet familiar shape delivers breathable stability.",
-      "condition": "very good",
-      "category": "fashion",
-      "inStock": true
-    },
-    {
-      "id": 7,
-      "name": "Lisabo",
-      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/317/0631745_PE695175_S4.jpg",
-      "price": 1205000,
-      "description": "Table, ash veneer, 105 cm",
-      "condition": "moderate",
-      "category": "furniture",
-      "inStock": false
-    },
-    {
-      "id": 8,
-      "name": "Billy/Oxberg Bookcase",
-      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/685/0668501_PE714530_S4.jpg",
-      "price": 1794500,
-      "description": "It is estimated that every five seconds, one BILLY bookcase is sold somewhere in the world. Pretty impressive considering we launched BILLY in 1979. It’s the booklovers choice that never goes out of style.",
-      "condition": "very good",
-      "category": "furniture",
-      "inStock": true
-    },
-    {
-      "id": 9,
       "name": "Samsung Galaxy S20",
       "image": "https://image-us.samsung.com/us/smartphones/galaxy-s20/Cosmic-Gray/X1_Lockup_CosmicGray-1600x1200.jpg?$product-details-jpg$",
       "price": 3592500,
       "description": "The Galaxy S20 is a well-built premium phone boasting of all the right features. It’s lightweight, waterproof, has a gorgeous display, super smooth 120Hz experience and a flagship camera, atleast on the back.",
       "condition": "good",
       "category": "electronics",
-      "inStock": false
+      "inStock": true,
+      "date": "04 April 2018",
+      "id": "2"
     },
     {
-      "id": 10,
+      "name": "Short Top",
+      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/f0e6770cc58cbf585caf009b8722cad262cad9c0_xxl-1.jpg",
+      "price": 95000,
+      "description": "Short top in soft seersucker with a square neckline, narrow elastication at the top and wdatee, smocked shoulder straps. Smocking at the waist and a flared peplum.",
+      "condition": "very good",
+      "category": "fashion",
+      "inStock": false,
+      "date": "27 Februari 2018",
+      "id": "3"
+    },
+    {
+      "name": "Nike Sportswear Swoosh",
+      "image": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a24b7ad6-d6d1-4db2-9b14-16bf30d22812/sportswear-swoosh-french-terry-hoodie-7NmqH4.png",
+      "price": 450000,
+      "description": "The Nike Sportswear Swoosh Full-Zip Hoodie shows love for the logo that started it all.Printed and embrodateered details add texture and style to this versatile French terry layer.",
+      "condition": "excellent",
+      "category": "fashion",
+      "inStock": false,
+      "date": "16 Desember 2019",
+      "id": "4"
+    },
+    {
       "name": "ASUS Vivobook 14K413",
       "image": "https://www.asus.com/media/global/gallery/wy50pivjnviluf7u_setting_xxx_0_90_end_800.png",
       "price": 4837500,
-      "description": "ASUS VivoBook 14 adds flair and dynamism to daily computing. With its Intel® Core™ i7 processor, VivoBook 14 provides the power you need to get things done. What’s more, the unique ASUS NumberPad 2.0 makes number-crunching tasks easy and efficient.",
+      "description": "ASUS VivoBook 14 adds flair and dynamism to daily computing. With its Intel® Core™ i7 processor, VivoBook 14 provdatees the power you need to get things done. What’s more, the unique ASUS NumberPad 2.0 makes number-crunching tasks easy and efficient.",
       "condition": "moderate",
       "category": "electronics",
-      "inStock": true
+      "inStock": false,
+      "date": "2 February 2021",
+      "id": "5"
     },
     {
-      "id": 11,
+      "name": "Nike Run Swift 2",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/f690d9fe-26ea-4cb2-9414-827365cfc3c0/run-swift-2-road-running-shoes-Pl8gq3.png",
+      "price": 560500,
+      "description": "The Nike Run Swift 2 is designed with shorter miles in mind.An updated yet familiar shape delivers breathable stability.",
+      "condition": "very good",
+      "category": "fashion",
+      "inStock": true,
+      "date": "29 Januari 2020",
+      "id": "6"
+    },
+    {
       "name": "UTESPELARE Gaming Chair",
       "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/856/0985643_PE816715_S4.jpg",
       "price": 702570,
       "description": "UTESPELARE gaming chair gives your body a nice support with a synchronised seat and back tilt that precisely follows your movements during the entire match. And after playing, you can sit back to recharge.",
       "condition": "good",
       "category": "furniture",
-      "inStock": true
+      "inStock": true,
+      "date": "06 May 2019",
+      "id": "7"
     },
     {
-      "id": 12,
+      "name": "Lisabo",
+      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/371/0737105_PE740883_S4.jpg",
+      "price": 1205000,
+      "description": "Table, ash veneer, 105 cm",
+      "condition": "moderate",
+      "category": "furniture",
+      "inStock": false,
+      "date": "13 Oktober 2021",
+      "id": "8"
+    },
+    {
+      "name": "Billy/Oxberg Bookcase",
+      "image": "https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/677/0667791_PE714089_S4.jpg",
+      "price": 1794500,
+      "description": "It is estimated that every five seconds, one BILLY bookcase is sold somewhere in the world. Pretty impressive consdateering we launched BILLY in 1979. It’s the booklovers choice that never goes out of style.",
+      "condition": "very good",
+      "category": "furniture",
+      "inStock": false,
+      "date": "08 Agustus 2018",
+      "id": "9"
+    },
+    {
       "name": "Samsung 43 Full HD Flat Series",
-      "image": "https://images.samsung.com/is/image/samsung/id-full-hd-n5000-ua43n5001akpxd-frontblack-145041782?$684_547_PNG$",
+      "image": "https://images.samsung.com/is/image/samsung/id-full-hd-n5003-ua43n5003akpxd-frontblack-100981428?$684_547_PNG$",
       "price": 3504600,
-      "description": "Your favorite TV programs and movies get real. The rich and vivid texture of the Full HD images will take your breath away. Plug your favourite entertainment and media into your TV – watch videos, play music, or view photos through a USB connection.",
+      "description": "Your favorite TV programs and movies get real. The rich and vivdate texture of the Full HD images will take your breath away. Plug your favourite entertainment and media into your TV – watch vdateeos, play music, or view photos through a USB connection.",
       "condition": "excellent",
       "category": "electronics",
-      "inStock": true
+      "inStock": true,
+      "date": "28 January",
+      "id": "10"
+    },
+    {
+      "name": "Century Modern Fabric Chair",
+      "image": "https://c.shld.net/rpx/i/s/pi/mp/27954/prod_14236885317?src=http%3A%2F%2Fgm-images.amiventures.net%2FAMI2%2FB07F25J3KX_L1.jpg&d=f99e325a7e74e3d695ca8a4a6ca9a765dd30b28e&",
+      "price": 3000000,
+      "description": "Those interested in a fun, retro look will go gaga over this Arm chair. An exceptionally crafted piece of Furniture, This plush selection stands firmly on four plucky rubber legs. A welcome addition to any home in need of a new spot to sink into after those long days at the office.",
+      "condition": "excellent",
+      "category": "furniture",
+      "inStock": true,
+      "date": "30 June 2021",
+      "id": "11"
+    },
+    {
+      "name": "XIAOMI MI BAND 5",
+      "image": "https://p.ipricegroup.com/uploaded_997d12a2ec5a6ce66527b28aecbb7092.jpg",
+      "price": 420000,
+      "description": "The smartwatch features a 1.1 inches AMOLED 2.5D colorful touchscreen that provdatees a resolution of 126 x 294 pixels. The device offers stunning visual experience, engaging interface, and smart message notification.",
+      "condition": "excellent",
+      "category": "accesories",
+      "inStock": true,
+      "date": "14 April 2020",
+      "id": "12"
+    },
+    {
+      "name": "CITIZEN CB5034-91W",
+      "image": "https://cdn.shopify.com/s/files/1/0594/9970/8613/products/13616_medium_8d87d038-0098-41a0-a641-dec9fdb2949e_1800x1800.jpg?v=1632846426",
+      "price": 834000,
+      "description": "Citizen Promaster Gents Watch CB5034-91W Green Dial with Stainless Steel Strap.",
+      "condition": "excellent",
+      "category": "accesories",
+      "inStock": true,
+      "date": "25 September 2018",
+      "id": "13"
+    },
+    {
+      "name": "Nike Air Force 1 '07 Premium",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/c678adbc-3bfb-41c8-8ca2-812f95be7c82/air-force-1-07-shoes-dr1bJC.png",
+      "price": 652500,
+      "description": "Let your youthful optimism shine in the Nike Air Force 1 '07 Premium, the b-ball original that proves you're never too old to go pineapples.",
+      "condition": "moderate",
+      "category": "fashion",
+      "inStock": true,
+      "date": "09 Mei 2019",
+      "id": "14"
+    },
+    {
+      "name": "Cotton Cap",
+      "image": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/558e37408f0f7cc2676459048a810d643002955c_xxl-1.jpg",
+      "price": 120000,
+      "description": "Blank Staples is a streetwear collection of minimalistic pieces that are the perfect canvas for your personal style and creativity. This stylish twill cap is made from organic cotton and recycled cotton.",
+      "condition": "very good",
+      "category": "fashion",
+      "inStock": true,
+      "date": "12 Maret 2019",
+      "id": "15"
     }
   ],
   "categories": [
     {
-      "id": 1,
-      "pict": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "date": 1,
+      "pict": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixdate=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
       "category": "ELECTRONICS"
     },
     {
-      "id": 2,
-      "pict": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "date": 2,
+      "pict": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&ixdate=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "category": "FURNITURES"
     },
     {
-      "id": 3,
-      "pict": "https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80",
+      "date": 3,
+      "pict": "https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?ixdate=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80",
       "category": "CLOTHES"
     },
     {
-      "id": 4,
-      "pict": "https://images.unsplash.com/photo-1559563458-527698bf5295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+      "date": 4,
+      "pict": "https://images.unsplash.com/photo-1559563458-527698bf5295?ixdate=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
       "category": "ACCESSORIES"
     }
   ]

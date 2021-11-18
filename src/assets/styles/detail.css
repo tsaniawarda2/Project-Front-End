@@ -7,7 +7,7 @@
 }
 
 .pict {
-  margin-top: 50px;
+  margin-top: 48px;
 }
 .image-container {
   width: 125%;
@@ -29,7 +29,7 @@
 }
 
 .info {
-  margin: 60px 25px 0px 125px;
+  margin: 80px 25px 0px 148px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -41,11 +41,13 @@
 
 .info p {
   text-align: justify;
-  margin: 28px 0px 32px;
+  font-size: 14px;
 }
 .detail-price {
-  font-size: 28px;
-  font-weight: 200;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 8px;
 }
 .add-container {
   width: 50%;
@@ -54,25 +56,25 @@
   justify-content: space-between;
   margin: 30px 0px;
 }
-.condition {
-  margin-top: 12px;
+.title-desc {
+  margin: 40px 0px 12px;
+  font-size: 18px;
+  font-weight: 600;
 }
-
-.decs-cond {
-  font-weight: 400;
+.first-decs {
   font-size: 16px;
-  text-transform: capitalize;
-  color: #3473c5;
 }
-.icon-detail {
-  padding-right: 10px;
+.second-decs {
+  margin: 20px 0px -14px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
+/* BUTTON */
 .btn {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
-
 .btn-success {
   border-color: #ffae01;
   background-color: #ffae01;
@@ -132,16 +134,6 @@
   .info p {
     font-size: 14px;
     margin: 28px 0px 24px;
-  }
-  .price {
-    font-size: 24px;
-    margin-top: 0px;
-  }
-  .condition {
-    margin-top: 12px;
-  }
-  .decs-cond {
-    font-size: 14px;
   }
   .add-container {
     width: 54px;

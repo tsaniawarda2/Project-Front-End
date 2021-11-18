@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
+.navbar > .container{
+  padding-right: 50px;
+}
+
 nav {
   font-family: "Rubik", sans-serif !important;
   background-color: #f8fdff;
@@ -21,7 +25,7 @@ nav {
   font-size: "24px";
 }
 .icon-logo {
-  width: 84px;
+  width: 250px;
 }
 .navbar-nav {
   list-style: none;
@@ -51,6 +55,7 @@ nav {
 
 .right-nav {
   margin-top: 4px;
+
 }
 .cart {
   text-decoration: none;
@@ -59,15 +64,20 @@ nav {
 .cart-nav {
   margin-top: -2px;
 }
+.dropdown-menu-cart{
+  padding: 10px;
+}
 .btn-nav-login {
   font-size: 14px;
   background-color: #f8fdff;
   border: 2px solid #3473c5;
   padding: 5px 10px;
-  border-radius: 10px;
   color: #3473c5;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
+  border: 2px solid #3473c5;
+  border-radius: 20px;
+  width: 90px;
 }
 .btn-nav-login:hover {
   color: #f8fdff;
@@ -85,10 +95,28 @@ nav {
 .user-login:focus-visible {
   outline: none;
 }
+.btn-username{
+  font-size: 14px;
+  background-color: #f8fdff;
+  border: 2px solid #3473c5;
+  padding: 5px 10px;
+  color: #3473c5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+
+  border: 2px solid #3473c5;
+  border-radius: 20px;
+  width: 90px;
+}
+.btn-username:hover {
+  color: #f8fdff;
+  background-color: #3473c5;
+}
+
 .cartitem {
   display: flex;
   flex-direction: row;
-  margin: 15px;
+  margin: 5px;
   padding: 0 10px;
 }
 
@@ -102,10 +130,13 @@ nav {
 }
 
 .btn-gotocart {
+  font-size: 14px;
+  margin-top: 5px;
   font-family: "Rubik", sans-serif;
   background-color: #ffae01;
   border-color: #ffae01;
   color: white;
+  width: 100%;
 }
 
 .btn-gotocart:hover {
@@ -114,13 +145,44 @@ nav {
   color: white;
 }
 
+.dropdown-menu-username{
+  padding: 10px!important;
+}
+.your-account{
+  font-weight: 600;
+}
+.btn-logout{
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: "Rubik", sans-serif;
+  background-color: #ffae01;
+  border-color: #ffae01;
+  color: white;
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn-logout:hover {
+
+  background-color: #3473c5;
+  border-color: #3473c5;
+  color: white;
+}
+
 @media only screen and (min-width: 381px) and (max-width: 768px) {
   .right-nav {
+
     text-align: center;
     margin: 18px 0px 8px;
   }
   .cart-nav {
     margin-top: -4px;
+  }
+
+  .icon-logo {
+    width: 200px;
   }
 }
 
@@ -131,5 +193,9 @@ nav {
   }
   .cart-nav {
     margin-top: -4px;
+  }
+
+  .icon-logo {
+    width: 150px;
   }
 }

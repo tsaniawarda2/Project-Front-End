@@ -64,10 +64,11 @@ const Slider = () => {
               <div className="title-slider">{item?.title}</div>
               <div className="p-slider">{item?.desc}</div>
 
-              <button className="btn-slider">
-                <NavLink to="/catalogs" />
-                Explore Now
-              </button>
+              <NavLink to="/catalogs">
+                <button className="btn-slider">
+                  Explore Now
+                </button>
+              </NavLink>
             </div>
           </Slide>
         ))}

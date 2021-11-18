@@ -11,7 +11,7 @@ export const sliderItems = [
     img: "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
     title: "LOTS OF VARIETY!",
     desc: "DON'T MISS OUT ON ALL THESE AMAZING PRODUCTS!",
-    bg: "f1ffef",
+    bg: "f8fdff",
   },
   {
     id: 3,

@@ -14,18 +14,10 @@ export const cartReducer = (state, action) => {
           c.id === action.payload.id ? (c.qty = action.payload.qty) : c.qty
         ),
       };
-    default:
-      return state;
-  }
-};
-
-export const filterReducer = (state, action) => {
-  switch (action.type) {
     case "SORT_BY_PRICE":
       return { ...state, sort: action.payload };
-    case "SEARCH_BY_VALUE":
-      return { ...state, searchQuery: action.payload };
-
+    case "CLEAR_FILTER":
+      return { ...state, sort: action.payload };
     default:
       return state;
   }

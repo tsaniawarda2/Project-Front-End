@@ -34,17 +34,20 @@ const Detail = () => {
           <div className="col-lg-8 col-md-12">
             <div className="info">
               <h1>{product?.name}</h1>
-              <p>{product?.description}</p>
-              <span className="detail-price">IDR {product?.price}</span>
-              <div className="condition">
-                <span className="decs-cond">
-                  <i
-                    class="fa fa-info-circle icon-detail"
-                    aria-hidden="true"
-                  ></i>
-                  {product?.condition}
-                </span>
+              <div className="title-desc">DESCRIPTION</div>
+              <div className="first-decs">{product?.description}</div>
+              <div className="second-decs">
+                Price :
+                <span className="detail-price">IDR {product?.price}</span>
               </div>
+              <div className="second-decs">
+                Last Buy :<span className="detail-price">{product?.date}</span>
+              </div>
+              <div className="second-decs">
+                Condition :
+                <span className="detail-price">{product?.condition}</span>
+              </div>
+
               <div className="add-container">
                 {cart.some((p) => p.id === product.id) ? (
                   <button

@@ -12,13 +12,14 @@ import "../assets/styles/catalogs.css";
 import "../assets/styles/filter.css";
 
 const categories = ["All", "Fashion", "Furniture", "Electronics", "Accesories"];
-const condition = ["Excellent", "Very good", "Good", "Moderate"];
+const condition = ["All", "Excellent", "Very good", "Good", "Moderate"];
 
 export default function Catalogs() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
   const [activeTabs, setActiveTabs] = useState(0);
+  const [activeConditions, setActiveConditions] = useState(0);
 
   let componentMounted = true;
 
@@ -79,20 +80,25 @@ export default function Catalogs() {
 
   // FILTER CONDITION
   const Dropdown = () => {
-    const filterCondition = (cdn) => {
+    const filterCondition = (cdn, idx) => {
+      setActiveConditions(cdn);
       let currProducts = [];
       if (activeTabs === 0) {
         currProducts = data;
       } else {
         const cat = categories[activeTabs].toLowerCase();
-        const updateList = data.filter((product) => product.category === cat);
+        const updateList = data?.filter((product) => product.category === cat);
         currProducts = updateList;
       }
-
-      const updateList = currProducts?.filter(
-        (product) => product.condition === cdn.toLowerCase()
-      );
-      setFilter(updateList);
+      if (idx === 0) {
+        setFilter(currProducts);
+      } else {
+        const cond = condition[idx].toLowerCase();
+        const updateList = currProducts?.filter(
+          (product) => product.condition === cond
+        );
+        setFilter(updateList);
+      }
     };
 
     return (
@@ -105,15 +111,17 @@ export default function Catalogs() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Conditions<i class="fas fa-angle-down icon-cond"></i>
+            {!activeConditions ? "Conditions" : activeConditions}
+            <i class="fas fa-angle-down icon"></i>
           </span>
+
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {condition?.map((cond, idx) => (
               <>
                 <li key={idx}>
                   <button
                     className="dropdown-item"
-                    onClick={() => filterCondition(cond)}
+                    onClick={() => filterCondition(cond, idx)}
                   >
                     {cond}
                   </button>
