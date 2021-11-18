@@ -3,9 +3,10 @@ import { DataContext } from "../context/DataProduct";
 import "../assets/styles/filter.css";
 const Filter = () => {
   const {
-    filterState: { sort },
-    filterDispatch,
+    state: { sort },
+    dispatch,
   } = useContext(DataContext);
+  console.log(sort, "--------sort");
   return (
     <>
       <div className="dropdown">
@@ -16,10 +17,12 @@ const Filter = () => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Price<i class="fas fa-angle-down icon"></i>
+          {!sort ? "Price" : sort}
+          <i class="fas fa-angle-down icon"></i>
         </span>
+
         <ul className="dropdown-menu">
-          <li className="form form1">
+          <li className="form">
             {/* Ascending */}
             <div class="form-check form-check-inline">
               <input
@@ -29,14 +32,14 @@ const Filter = () => {
                 id="flexCheckDefault1"
                 value="option1"
                 onChange={() =>
-                  filterDispatch({
+                  dispatch({
                     type: "SORT_BY_PRICE",
-                    payload: "lowToHigh",
+                    payload: "Low-High",
                   })
                 }
-                checked={sort === "lowToHigh" ? true : false}
+                checked={sort === "Low-High" ? true : false}
               />
-              <label class="form-check-label" for="flexCheckDefault1">
+              <label class="form-check-label f-menu" for="flexCheckDefault1">
                 Low-High
               </label>
             </div>
@@ -51,14 +54,14 @@ const Filter = () => {
                 id="flexCheckDefault2"
                 value="option2"
                 onChange={() =>
-                  filterDispatch({
+                  dispatch({
                     type: "SORT_BY_PRICE",
-                    payload: "highToLow",
+                    payload: "High-Low",
                   })
                 }
-                checked={sort === "highToLow" ? true : false}
+                checked={sort === "High-Low" ? true : false}
               />
-              <label class="form-check-label" for="flexCheckDefault2">
+              <label class="form-check-label f-menu" for="flexCheckDefault2">
                 High-Low
               </label>
             </div>

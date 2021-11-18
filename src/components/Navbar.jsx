@@ -22,7 +22,6 @@ export default function Navbar() {
       setStatusLogin(true);
     }
   });
-  console.log(login);
 
   return (
     <>
