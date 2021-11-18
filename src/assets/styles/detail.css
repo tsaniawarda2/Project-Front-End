@@ -12,9 +12,9 @@
 .image-container {
   width: 125%;
   height: 100%;
-  background-color: #3473c571;
+  background-color: transparent;
   border-radius: 90%;
-  padding: 45px 90px;
+  padding: 45px 10px;
 }
 
 #detail-img {

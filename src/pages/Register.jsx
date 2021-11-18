@@ -47,7 +47,7 @@ function Register() {
           }
         })
         .then((data) => {
-          localStorage.setItem("dataRegister", JSON.stringify(data));
+          localStorage.setItem("dataRegister", JSON.stringify(form));
           })
           .catch((error) => {
             console.log(error);
@@ -56,7 +56,7 @@ function Register() {
       }
       history.push("/login");
     } else{
-      console.log("usn slaah");
+      console.log("wrong username");
     }
   }
 

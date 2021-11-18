@@ -102,7 +102,7 @@ export default function Footer() {
       </Container>
       <hr />
       <div class="text-center">
-        <p class="copyright">Created By BuyMePlease | All rights reserved</p>
+        <p class="copyright">Created By BuyMePlease 2021 | All rights reserved</p>
       </div>
     </>
   );

@@ -17,16 +17,15 @@ function Login() {
   function handleLogin(e) {
 		e.preventDefault();
     
-		// let password = localStorage.getItem("Password")
-		// let username = localStorage.getItem("Username")
+		let password = localStorage.getItem("Password")
+		let username = localStorage.getItem("Username")
 		// console.log(passwordlog, "passlog")
 		// console.log(usernamelog, "usernamelog");
-    let register = JSON.parse(localStorage.getItem("dataRegister"))
-    let password = register?.password
-    let username = register?.username
+    // let register = JSON.parse(localStorage.getItem("dataRegister"))
+    // let password = register?.password
+    // let username = register?.username
     // console.log(register.password, "password");
     // console.log(register.username, "username");
-		
 
 		if(password == null || username == null){
 			console.log("belum register");
