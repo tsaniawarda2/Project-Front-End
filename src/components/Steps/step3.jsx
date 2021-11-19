@@ -36,23 +36,8 @@ const Step3 = ({ data, handlePrev }) => {
             title: "Payment Success",
             text: "Thank you for your order, see you!",
             icon: "success",
-            buttons: {
-              continueShopping: "Continue Shopping",
-              ok: "Ok",
-            },
-          }).then((value) => {
-            switch (value) {
-              case "continueShopping":
-                window.location = "/catalogs";
-                break;
-              case "ok":
-                window.location = "/";
-                break;
-              default:
-                window.location = "/";
-                break;
-            }
-          });
+            buttons: "Ok"
+          }).then(() => window.location = "/");
         } else {
           failedProduct.push(arrCart[index]);
           swal({
