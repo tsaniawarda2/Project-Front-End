@@ -166,7 +166,7 @@
   .FormComponent-formContainer-1 {
     background-repeat: repeat;
     object-fit: cover;
-    height: 100%;
+    height: 100vh;
   }
 
   .total-price-stepper h5 {
@@ -176,7 +176,7 @@
 
 @media only screen and (max-width: 380px) {
   .FormComponent-formContainer-1 {
-    height: 100%;
+    height: 100vh;
     background-repeat: repeat;
     object-fit: cover;
   }
