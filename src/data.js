@@ -36,7 +36,7 @@ export const categories = [
   {
     id: 3,
     img: "https://images.unsplash.com/photo-1540221652346-e5dd6b50f3e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80",
-    title: "CLOTHES",
+    title: "FASHION",
   },
   {
     id: 4,
