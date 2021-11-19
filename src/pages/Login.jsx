@@ -20,27 +20,30 @@ function Login() {
     let password = localStorage.getItem("Password");
     let username = localStorage.getItem("Username");
 
-    if (password == null || username == null) {
-      console.log("belum register");
+    if (password === null || username === null) {
+        swal("You didn't have any account, let's register!")
+        console.log("belum register");
     } else {
       password = password.replace(/"/g, "");
       username = username.replace(/"/g, "");
-      if (!usernamelog || !passwordlog) {
-        swal({
-          title: "Try Again!",
-          text: "All field must be filled, try again!",
-          icon: "warning",
-          button: "Ok!",
-        });
-        console.log("EMPTY");
-      } else if (passwordlog !== password || usernamelog !== username) {
-        console.log("salah");
-        swal({
-          title: "Try Again!",
-          text: "Your username or password wrong, try again!",
-          icon: "warning",
-          button: "Ok!",
-        });
+      if (passwordlog !== password || usernamelog !== username) {
+        if (!usernamelog || !passwordlog) {
+          swal({
+            title: "Try Again!",
+            text: "All field must be filled, try again!",
+            icon: "warning",
+            button: "Ok!",
+          });
+          console.log("EMPTY");
+          } else {
+          console.log("salah");
+          swal({
+            title: "Try Again!",
+            text: "Your username or password wrong, try again!",
+            icon: "warning",
+            button: "Ok!",
+          });
+        }
       } else {
         const login = {
           password: passwordlog,

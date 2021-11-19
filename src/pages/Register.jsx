@@ -29,6 +29,8 @@ function Register() {
     if (usernameErr === "") {
       const payload = form;
       if (form?.email && form?.username && form?.password) {
+        //pindahin localStorage
+        localStorage.setItem("dataRegister", JSON.stringify(form));
         fetch(`${BASEURL}/users`, {
           method: "POST",
           headers: {
@@ -42,9 +44,6 @@ function Register() {
             } else {
               return new Error("Failed to Sign Up");
             }
-          })
-          .then((data) => {
-            localStorage.setItem("dataRegister", JSON.stringify(form));
           })
           .catch((error) => {
             console.log(error);
